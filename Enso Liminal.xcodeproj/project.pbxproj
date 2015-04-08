@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38A922451AD4F718002D1777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A922441AD4F718002D1777 /* AppDelegate.swift */; };
+		38A922481AD4F718002D1777 /* Enso_Liminal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38A922461AD4F718002D1777 /* Enso_Liminal.xcdatamodeld */; };
+		38A9224A1AD4F718002D1777 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A922491AD4F718002D1777 /* ViewController.swift */; };
+		38A9224D1AD4F718002D1777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A9224B1AD4F718002D1777 /* Main.storyboard */; };
+		38A9224F1AD4F718002D1777 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A9224E1AD4F718002D1777 /* Images.xcassets */; };
+		38A922521AD4F718002D1777 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38A922501AD4F718002D1777 /* LaunchScreen.xib */; };
+		38A9225E1AD4F718002D1777 /* Enso_LiminalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9225D1AD4F718002D1777 /* Enso_LiminalTests.swift */; };
+		38A9226E1AD4FBDC002D1777 /* SyllableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A9226D1AD4FBDC002D1777 /* SyllableController.m */; };
+		38A922721AD4FD36002D1777 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A922711AD4FD36002D1777 /* JavaScriptCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38A922581AD4F718002D1777 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38A922371AD4F718002D1777 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38A9223E1AD4F718002D1777;
+			remoteInfo = "Enso Liminal";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38A9223F1AD4F718002D1777 /* Enso Liminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enso Liminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38A922431AD4F718002D1777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38A922441AD4F718002D1777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38A922471AD4F718002D1777 /* Enso_Liminal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Enso_Liminal.xcdatamodel; sourceTree = "<group>"; };
+		38A922491AD4F718002D1777 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38A9224C1AD4F718002D1777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38A9224E1AD4F718002D1777 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		38A922511AD4F718002D1777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		38A922571AD4F718002D1777 /* Enso LiminalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Enso LiminalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38A9225C1AD4F718002D1777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38A9225D1AD4F718002D1777 /* Enso_LiminalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enso_LiminalTests.swift; sourceTree = "<group>"; };
+		38A9226B1AD4FBDC002D1777 /* Enso Liminal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Enso Liminal-Bridging-Header.h"; sourceTree = "<group>"; };
+		38A9226C1AD4FBDC002D1777 /* SyllableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyllableController.h; sourceTree = "<group>"; };
+		38A9226D1AD4FBDC002D1777 /* SyllableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyllableController.m; sourceTree = "<group>"; };
+		38A9226F1AD4FC21002D1777 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		38A922711AD4FD36002D1777 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38A9223C1AD4F718002D1777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38A922721AD4FD36002D1777 /* JavaScriptCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38A922541AD4F718002D1777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38A922361AD4F718002D1777 = {
+			isa = PBXGroup;
+			children = (
+				38A922711AD4FD36002D1777 /* JavaScriptCore.framework */,
+				38A9226F1AD4FC21002D1777 /* WebKit.framework */,
+				38A922411AD4F718002D1777 /* Enso Liminal */,
+				38A9225A1AD4F718002D1777 /* Enso LiminalTests */,
+				38A922401AD4F718002D1777 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38A922401AD4F718002D1777 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38A9223F1AD4F718002D1777 /* Enso Liminal.app */,
+				38A922571AD4F718002D1777 /* Enso LiminalTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38A922411AD4F718002D1777 /* Enso Liminal */ = {
+			isa = PBXGroup;
+			children = (
+				38A922441AD4F718002D1777 /* AppDelegate.swift */,
+				38A9226B1AD4FBDC002D1777 /* Enso Liminal-Bridging-Header.h */,
+				38A922681AD4FB60002D1777 /* Model */,
+				38A922671AD4FB59002D1777 /* Controller */,
+				38A922691AD4FB66002D1777 /* View */,
+				38A9224E1AD4F718002D1777 /* Images.xcassets */,
+				38A922421AD4F718002D1777 /* Supporting Files */,
+			);
+			path = "Enso Liminal";
+			sourceTree = "<group>";
+		};
+		38A922421AD4F718002D1777 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38A922431AD4F718002D1777 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38A9225A1AD4F718002D1777 /* Enso LiminalTests */ = {
+			isa = PBXGroup;
+			children = (
+				38A9225D1AD4F718002D1777 /* Enso_LiminalTests.swift */,
+				38A9225B1AD4F718002D1777 /* Supporting Files */,
+			);
+			path = "Enso LiminalTests";
+			sourceTree = "<group>";
+		};
+		38A9225B1AD4F718002D1777 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38A9225C1AD4F718002D1777 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38A922671AD4FB59002D1777 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				38A9226A1AD4FBA3002D1777 /* DataController */,
+				38A922491AD4F718002D1777 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		38A922681AD4FB60002D1777 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38A922461AD4F718002D1777 /* Enso_Liminal.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		38A922691AD4FB66002D1777 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38A9224B1AD4F718002D1777 /* Main.storyboard */,
+				38A922501AD4F718002D1777 /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		38A9226A1AD4FBA3002D1777 /* DataController */ = {
+			isa = PBXGroup;
+			children = (
+				38A9226C1AD4FBDC002D1777 /* SyllableController.h */,
+				38A9226D1AD4FBDC002D1777 /* SyllableController.m */,
+			);
+			name = DataController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38A9223E1AD4F718002D1777 /* Enso Liminal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38A922611AD4F718002D1777 /* Build configuration list for PBXNativeTarget "Enso Liminal" */;
+			buildPhases = (
+				38A9223B1AD4F718002D1777 /* Sources */,
+				38A9223C1AD4F718002D1777 /* Frameworks */,
+				38A9223D1AD4F718002D1777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Enso Liminal";
+			productName = "Enso Liminal";
+			productReference = 38A9223F1AD4F718002D1777 /* Enso Liminal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38A922561AD4F718002D1777 /* Enso LiminalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38A922641AD4F718002D1777 /* Build configuration list for PBXNativeTarget "Enso LiminalTests" */;
+			buildPhases = (
+				38A922531AD4F718002D1777 /* Sources */,
+				38A922541AD4F718002D1777 /* Frameworks */,
+				38A922551AD4F718002D1777 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38A922591AD4F718002D1777 /* PBXTargetDependency */,
+			);
+			name = "Enso LiminalTests";
+			productName = "Enso LiminalTests";
+			productReference = 38A922571AD4F718002D1777 /* Enso LiminalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38A922371AD4F718002D1777 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Leonardo Lee";
+				TargetAttributes = {
+					38A9223E1AD4F718002D1777 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					38A922561AD4F718002D1777 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 38A9223E1AD4F718002D1777;
+					};
+				};
+			};
+			buildConfigurationList = 38A9223A1AD4F718002D1777 /* Build configuration list for PBXProject "Enso Liminal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38A922361AD4F718002D1777;
+			productRefGroup = 38A922401AD4F718002D1777 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38A9223E1AD4F718002D1777 /* Enso Liminal */,
+				38A922561AD4F718002D1777 /* Enso LiminalTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38A9223D1AD4F718002D1777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38A9224D1AD4F718002D1777 /* Main.storyboard in Resources */,
+				38A922521AD4F718002D1777 /* LaunchScreen.xib in Resources */,
+				38A9224F1AD4F718002D1777 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38A922551AD4F718002D1777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38A9223B1AD4F718002D1777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38A9224A1AD4F718002D1777 /* ViewController.swift in Sources */,
+				38A922451AD4F718002D1777 /* AppDelegate.swift in Sources */,
+				38A922481AD4F718002D1777 /* Enso_Liminal.xcdatamodeld in Sources */,
+				38A9226E1AD4FBDC002D1777 /* SyllableController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38A922531AD4F718002D1777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38A9225E1AD4F718002D1777 /* Enso_LiminalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38A922591AD4F718002D1777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38A9223E1AD4F718002D1777 /* Enso Liminal */;
+			targetProxy = 38A922581AD4F718002D1777 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38A9224B1AD4F718002D1777 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38A9224C1AD4F718002D1777 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38A922501AD4F718002D1777 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38A922511AD4F718002D1777 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38A9225F1AD4F718002D1777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38A922601AD4F718002D1777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38A922621AD4F718002D1777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Enso Liminal/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Enso Liminal/Enso Liminal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		38A922631AD4F718002D1777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "Enso Liminal/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Enso Liminal/Enso Liminal-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		38A922651AD4F718002D1777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Enso LiminalTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Enso Liminal.app/Enso Liminal";
+			};
+			name = Debug;
+		};
+		38A922661AD4F718002D1777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Enso LiminalTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Enso Liminal.app/Enso Liminal";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38A9223A1AD4F718002D1777 /* Build configuration list for PBXProject "Enso Liminal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38A9225F1AD4F718002D1777 /* Debug */,
+				38A922601AD4F718002D1777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38A922611AD4F718002D1777 /* Build configuration list for PBXNativeTarget "Enso Liminal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38A922621AD4F718002D1777 /* Debug */,
+				38A922631AD4F718002D1777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38A922641AD4F718002D1777 /* Build configuration list for PBXNativeTarget "Enso LiminalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38A922651AD4F718002D1777 /* Debug */,
+				38A922661AD4F718002D1777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		38A922461AD4F718002D1777 /* Enso_Liminal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				38A922471AD4F718002D1777 /* Enso_Liminal.xcdatamodel */,
+			);
+			currentVersion = 38A922471AD4F718002D1777 /* Enso_Liminal.xcdatamodel */;
+			path = Enso_Liminal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 38A922371AD4F718002D1777 /* Project object */;
+}
