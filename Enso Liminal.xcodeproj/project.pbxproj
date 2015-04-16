@@ -66,11 +66,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		387CA1E01AD642AE00011BB6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				38A922491AD4F718002D1777 /* ViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		38A922361AD4F718002D1777 = {
 			isa = PBXGroup;
 			children = (
-				38A922711AD4FD36002D1777 /* JavaScriptCore.framework */,
-				38A9226F1AD4FC21002D1777 /* WebKit.framework */,
+				38CFF2DC1ADB50D1005DBC3E /* Frameworks */,
 				38A922411AD4F718002D1777 /* Enso Liminal */,
 				38A9225A1AD4F718002D1777 /* Enso LiminalTests */,
 				38A922401AD4F718002D1777 /* Products */,
@@ -89,8 +96,8 @@
 		38A922411AD4F718002D1777 /* Enso Liminal */ = {
 			isa = PBXGroup;
 			children = (
-				38A922441AD4F718002D1777 /* AppDelegate.swift */,
 				38A9226B1AD4FBDC002D1777 /* Enso Liminal-Bridging-Header.h */,
+				38A922441AD4F718002D1777 /* AppDelegate.swift */,
 				38A922681AD4FB60002D1777 /* Model */,
 				38A922671AD4FB59002D1777 /* Controller */,
 				38A922691AD4FB66002D1777 /* View */,
@@ -128,8 +135,8 @@
 		38A922671AD4FB59002D1777 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				387CA1E01AD642AE00011BB6 /* ViewController */,
 				38A9226A1AD4FBA3002D1777 /* DataController */,
-				38A922491AD4F718002D1777 /* ViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -158,6 +165,15 @@
 				38A9226D1AD4FBDC002D1777 /* SyllableController.m */,
 			);
 			name = DataController;
+			sourceTree = "<group>";
+		};
+		38CFF2DC1ADB50D1005DBC3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38A922711AD4FD36002D1777 /* JavaScriptCore.framework */,
+				38A9226F1AD4FC21002D1777 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,6 +478,7 @@
 				38A922631AD4F718002D1777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38A922641AD4F718002D1777 /* Build configuration list for PBXNativeTarget "Enso LiminalTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +487,7 @@
 				38A922661AD4F718002D1777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

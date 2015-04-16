@@ -10,6 +10,8 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 
 @interface SyllableController : NSObject
+
+@property (nonatomic, strong) JSVirtualMachine *vm;
 @property (nonatomic, strong) JSContext *hyphenationEngine;
 
 @end

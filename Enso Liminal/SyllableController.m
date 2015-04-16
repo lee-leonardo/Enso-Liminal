@@ -14,18 +14,37 @@
 {
     self = [super init];
     if (self) {
+        _vm = [[JSVirtualMachine alloc] init];
         _hyphenationEngine = [[JSContext alloc] init];
-//        _hyphenationEngine[@"hyphenation"] = 
+
+        [self setupHyphenationDictionary];
     }
     return self;
 }
 
-    //TODO: Need to work on porting over the Javascript library into the syllable counter.
++(SyllableController *)sharedInstance {
+    static SyllableController *syllableCounter;
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        syllableCounter = [[SyllableController alloc] init];
+    });
+    
+    return syllableCounter;
+}
+
+//TODO: Need to work on porting over the Javascript library into the syllable counter.
+-(void)setupHyphenationDictionary {
+    //        _hyphenationEngine[@"hyphenation"] =
+}
+
 -(void)hyphenateText:(NSString *)haiku {
     
     NSString *jsMethod = [NSString stringWithFormat:@"var hyphenated = hyphenation.hyphenateString(%@)", haiku];
     [_hyphenationEngine evaluateScript:jsMethod];
     
 }
+
+
 
 @end
