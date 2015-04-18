@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381717411AE21750000E4648 /* english.js in Resources */ = {isa = PBXBuildFile; fileRef = 3817173F1AE21750000E4648 /* english.js */; };
+		381717421AE21750000E4648 /* noNode_hyper.js in Resources */ = {isa = PBXBuildFile; fileRef = 381717401AE21750000E4648 /* noNode_hyper.js */; };
 		38A922451AD4F718002D1777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A922441AD4F718002D1777 /* AppDelegate.swift */; };
 		38A922481AD4F718002D1777 /* Enso_Liminal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38A922461AD4F718002D1777 /* Enso_Liminal.xcdatamodeld */; };
 		38A9224A1AD4F718002D1777 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A922491AD4F718002D1777 /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3817173F1AE21750000E4648 /* english.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = english.js; path = "Enso Liminal/js/english.js"; sourceTree = "<group>"; };
+		381717401AE21750000E4648 /* noNode_hyper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = noNode_hyper.js; path = "Enso Liminal/js/noNode_hyper.js"; sourceTree = "<group>"; };
 		38A9223F1AD4F718002D1777 /* Enso Liminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enso Liminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A922431AD4F718002D1777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38A922441AD4F718002D1777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3817173E1AE2173E000E4648 /* JS */ = {
+			isa = PBXGroup;
+			children = (
+				3817173F1AE21750000E4648 /* english.js */,
+				381717401AE21750000E4648 /* noNode_hyper.js */,
+			);
+			name = JS;
+			sourceTree = "<group>";
+		};
 		387CA1E01AD642AE00011BB6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +183,7 @@
 		38CFF2DC1ADB50D1005DBC3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3817173E1AE2173E000E4648 /* JS */,
 				38A922711AD4FD36002D1777 /* JavaScriptCore.framework */,
 				38A9226F1AD4FC21002D1777 /* WebKit.framework */,
 			);
@@ -259,6 +273,8 @@
 				38A9224D1AD4F718002D1777 /* Main.storyboard in Resources */,
 				38A922521AD4F718002D1777 /* LaunchScreen.xib in Resources */,
 				38A9224F1AD4F718002D1777 /* Images.xcassets in Resources */,
+				381717421AE21750000E4648 /* noNode_hyper.js in Resources */,
+				381717411AE21750000E4648 /* english.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

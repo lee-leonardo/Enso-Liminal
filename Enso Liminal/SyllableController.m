@@ -35,7 +35,25 @@
 
 //TODO: Need to work on porting over the Javascript library into the syllable counter.
 -(void)setupHyphenationDictionary {
-    //        _hyphenationEngine[@"hyphenation"] =
+//    _hyphenationEngine[@"hyphenation"] =
+    
+    NSError *error = [[NSError alloc] init];
+    NSData *hyperFile = [NSData dataWithContentsOfFile:@"js/noNode_hypher.js" options:NSDataReadingMappedIfSafe error:&error];
+    if (error != nil) {
+        NSLog(@"Error Reading File: %@", error.localizedDescription);
+    }
+    
+    NSString *hypher = [NSString stringWithUTF8String:[hyperFile bytes]] ;
+    [_hyphenationEngine evaluateScript:hypher];
+    
+    //
+    NSData *englishFile = [NSData dataWithContentsOfFile:@"js/english" options:NSDataReadingMappedIfSafe error:&error];
+    if (error != nil) {
+        NSLog(@"Error Reading File: %@", error.localizedDescription);
+    }
+    NSString *english = [NSString stringWithUTF8String:[englishFile bytes]];
+    [_hyphenationEngine evaluateScript:english];
+    
 }
 
 -(void)hyphenateText:(NSString *)haiku {
