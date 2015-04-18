@@ -13,5 +13,8 @@
 
 @property (nonatomic, strong) JSVirtualMachine *vm;
 @property (nonatomic, strong) JSContext *hyphenationEngine;
+@property (nonatomic, strong) NSOperationQueue *syllableQueue;
+
++(SyllableController *)sharedInstance;
 
 @end
