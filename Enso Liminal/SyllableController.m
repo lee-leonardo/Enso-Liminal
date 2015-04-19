@@ -60,8 +60,6 @@
     NSString *english = [NSString stringWithUTF8String:[englishFile bytes]];
     [_hyphenationEngine evaluateScript:english];
     
-    NSString *initHyphenation = [NSString stringWithFormat:@""];
-    
 }
 -(void)setupQueue {
     _syllableQueue = [[NSOperationQueue alloc] init];
