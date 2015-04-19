@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		381717411AE21750000E4648 /* english.js in Resources */ = {isa = PBXBuildFile; fileRef = 3817173F1AE21750000E4648 /* english.js */; };
 		381717421AE21750000E4648 /* noNode_hyper.js in Resources */ = {isa = PBXBuildFile; fileRef = 381717401AE21750000E4648 /* noNode_hyper.js */; };
+		3880D6271AE472AD008DA736 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6251AE472AD008DA736 /* Crashlytics.framework */; };
+		3880D6281AE472AD008DA736 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6261AE472AD008DA736 /* Fabric.framework */; };
+		3880D62B1AE47330008DA736 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6291AE47330008DA736 /* TwitterKit.framework */; };
+		3880D62C1AE47330008DA736 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3880D62A1AE47330008DA736 /* TwitterKitResources.bundle */; };
 		38A922451AD4F718002D1777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A922441AD4F718002D1777 /* AppDelegate.swift */; };
 		38A922481AD4F718002D1777 /* Enso_Liminal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38A922461AD4F718002D1777 /* Enso_Liminal.xcdatamodeld */; };
 		38A9224A1AD4F718002D1777 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A922491AD4F718002D1777 /* ViewController.swift */; };
@@ -36,6 +40,10 @@
 		1948C5C39D09D5E1CB50F453 /* Pods_Enso_Liminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Enso_Liminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3817173F1AE21750000E4648 /* english.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = english.js; path = "Enso Liminal/js/english.js"; sourceTree = "<group>"; };
 		381717401AE21750000E4648 /* noNode_hyper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = noNode_hyper.js; path = "Enso Liminal/js/noNode_hyper.js"; sourceTree = "<group>"; };
+		3880D6251AE472AD008DA736 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		3880D6261AE472AD008DA736 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		3880D6291AE47330008DA736 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		3880D62A1AE47330008DA736 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		38A9223F1AD4F718002D1777 /* Enso Liminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enso Liminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A922431AD4F718002D1777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38A922441AD4F718002D1777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +69,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				38A922721AD4FD36002D1777 /* JavaScriptCore.framework in Frameworks */,
+				3880D62B1AE47330008DA736 /* TwitterKit.framework in Frameworks */,
+				3880D6271AE472AD008DA736 /* Crashlytics.framework in Frameworks */,
 				FE40E74E1AB8D093F24541C9 /* Pods_Enso_Liminal.framework in Frameworks */,
+				3880D6281AE472AD008DA736 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +200,10 @@
 		38CFF2DC1ADB50D1005DBC3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3880D6291AE47330008DA736 /* TwitterKit.framework */,
+				3880D62A1AE47330008DA736 /* TwitterKitResources.bundle */,
+				3880D6251AE472AD008DA736 /* Crashlytics.framework */,
+				3880D6261AE472AD008DA736 /* Fabric.framework */,
 				3817173E1AE2173E000E4648 /* JS */,
 				38A922711AD4FD36002D1777 /* JavaScriptCore.framework */,
 				38A9226F1AD4FC21002D1777 /* WebKit.framework */,
@@ -219,6 +234,7 @@
 				38A9223D1AD4F718002D1777 /* Resources */,
 				7729C2A75A609AD5E9696AC4 /* Embed Pods Frameworks */,
 				AE3B3500F25A87646368D4B3 /* Copy Pods Resources */,
+				3880D6241AE47294008DA736 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -293,6 +309,7 @@
 				38A922521AD4F718002D1777 /* LaunchScreen.xib in Resources */,
 				38A9224F1AD4F718002D1777 /* Images.xcassets in Resources */,
 				381717421AE21750000E4648 /* noNode_hyper.js in Resources */,
+				3880D62C1AE47330008DA736 /* TwitterKitResources.bundle in Resources */,
 				381717411AE21750000E4648 /* english.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +338,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		3880D6241AE47294008DA736 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run b27867868d56ac0aa5505130348bb038aa2afb64 fadf119c5dec828e8f7753bb64901e769e4bc0d1488ef0d22294e5c92aca52b0";
 		};
 		7729C2A75A609AD5E9696AC4 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -489,6 +519,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Enso Liminal/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,6 +537,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Enso Liminal/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
