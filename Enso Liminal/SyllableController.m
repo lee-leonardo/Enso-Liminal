@@ -46,6 +46,10 @@
     _hyphenationEngine = [[JSContext alloc] init];
     
     
+    //TODO: Refactor Code to use these
+    NSString *hypherFile = [[NSBundle mainBundle] pathForResource:@"noNode_hypher" ofType:@"js" inDirectory:@"js"];
+    
+    NSString *englishLanguage = [[NSBundle mainBundle] pathForResource:@"english" ofType:@"js" inDirectory:@"js"];
     
     //Refactor this out.
     NSError *error = [[NSError alloc] init];
