@@ -28,27 +28,31 @@
     return self;
 }
 
-+(SyllableController *)sharedInstance {
++(id)sharedInstance {
     static SyllableController *syllableCounter;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
-        syllableCounter = [[SyllableController alloc] init];
+        syllableCounter = [[self alloc] init];
     });
     
     return syllableCounter;
 }
 
 #pragma mark - Setup
-//TODO: Need to work on porting over the Javascript library into the syllable counter.
+//TODO: The files for the hyphenation dictory needs to be adjusted to look for the right filepaths.
 -(void)setupHyphenationDictionary {
     _vm = [[JSVirtualMachine alloc] init];
     _hyphenationEngine = [[JSContext alloc] init];
+    
+    
+    
+    //Refactor this out.
     NSError *error = [[NSError alloc] init];
     
     NSData *hyperFile = [NSData dataWithContentsOfFile:@"js/noNode_hypher.js" options:NSDataReadingMappedIfSafe error:&error];
     if (error != nil) {
-        NSLog(@"Error Reading File: %@", error.localizedDescription);
+
     }
     NSString *hypher = [NSString stringWithUTF8String:[hyperFile bytes]] ;
     [_hyphenationEngine evaluateScript:hypher];
@@ -66,6 +70,19 @@
     _syllableQueue.name = @"hyphenator";
     _syllableQueue.qualityOfService = NSQualityOfServiceUtility;
     _syllableQueue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
+}
+-(void)loadScriptWithPath:(NSString *)path {
+    NSError *error;
+    NSData *file = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:&error];
+    
+    if (error != NULL) {
+        NSLog(@"Error Reading File: %@", error.localizedDescription);
+    } else {
+//        file
+        NSString *js = [NSString stringWithUTF8String:[file bytes]];
+        [_hyphenationEngine evaluateScript: js];
+    }
+
 }
 
 #pragma mark - Hyphenation and Syllables
