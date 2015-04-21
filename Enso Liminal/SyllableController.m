@@ -45,28 +45,37 @@
     _vm = [[JSVirtualMachine alloc] init];
     _hyphenationEngine = [[JSContext alloc] init];
     
+    NSBundle *main = [NSBundle mainBundle];
+    NSString *hypherPath = [main pathForResource:@"noNode_hypher" ofType:@"js" inDirectory:@"js"];
+    NSLog(@"%@", hypherPath);
     
     //TODO: Refactor Code to use these
+    NSArray *array = [[NSBundle mainBundle] pathsForResourcesOfType:@"js" inDirectory:@"js"];
+    NSLog(@"%@", array);
+    
+    
     NSString *hypherFile = [[NSBundle mainBundle] pathForResource:@"noNode_hypher" ofType:@"js" inDirectory:@"js"];
+    NSLog(@"%@", hypherFile);
     
     NSString *englishLanguage = [[NSBundle mainBundle] pathForResource:@"english" ofType:@"js" inDirectory:@"js"];
     
+    NSLog(@"%@", englishLanguage);
+    
     //Refactor this out.
-    NSError *error = [[NSError alloc] init];
-    
-    NSData *hyperFile = [NSData dataWithContentsOfFile:@"js/noNode_hypher.js" options:NSDataReadingMappedIfSafe error:&error];
-    if (error != nil) {
-
-    }
-    NSString *hypher = [NSString stringWithUTF8String:[hyperFile bytes]] ;
-    [_hyphenationEngine evaluateScript:hypher];
-    
-    NSData *englishFile = [NSData dataWithContentsOfFile:@"js/english" options:NSDataReadingMappedIfSafe error:&error];
-    if (error != nil) {
-        NSLog(@"Error Reading File: %@", error.localizedDescription);
-    }
-    NSString *english = [NSString stringWithUTF8String:[englishFile bytes]];
-    [_hyphenationEngine evaluateScript:english];
+//    NSError *error = [[NSError alloc] init];
+//    NSData *hyperFile = [NSData dataWithContentsOfFile:@"js/noNode_hypher.js" options:NSDataReadingMappedIfSafe error:&error];
+//    if (error != nil) {
+//        NSLog(@"Error Reading File: %@", error.localizedDescription);
+//    }
+//    NSString *hypher = [NSString stringWithUTF8String:[hyperFile bytes]] ;
+//    [_hyphenationEngine evaluateScript:hypher];
+//    
+//    NSData *englishFile = [NSData dataWithContentsOfFile:@"js/english" options:NSDataReadingMappedIfSafe error:&error];
+//    if (error != nil) {
+//        NSLog(@"Error Reading File: %@", error.localizedDescription);
+//    }
+//    NSString *english = [NSString stringWithUTF8String:[englishFile bytes]];
+//    [_hyphenationEngine evaluateScript:english];
     
 }
 -(void)setupQueue {

@@ -86,13 +86,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3817173E1AE2173E000E4648 /* JS */ = {
+		3817173E1AE2173E000E4648 /* js */ = {
 			isa = PBXGroup;
 			children = (
 				3817173F1AE21750000E4648 /* english.js */,
 				381717401AE21750000E4648 /* noNode_hyper.js */,
 			);
-			name = JS;
+			name = js;
 			sourceTree = "<group>";
 		};
 		387CA1E01AD642AE00011BB6 /* ViewController */ = {
@@ -204,7 +204,7 @@
 				3880D62A1AE47330008DA736 /* TwitterKitResources.bundle */,
 				3880D6251AE472AD008DA736 /* Crashlytics.framework */,
 				3880D6261AE472AD008DA736 /* Fabric.framework */,
-				3817173E1AE2173E000E4648 /* JS */,
+				3817173E1AE2173E000E4648 /* js */,
 				38A922711AD4FD36002D1777 /* JavaScriptCore.framework */,
 				38A9226F1AD4FC21002D1777 /* WebKit.framework */,
 				1948C5C39D09D5E1CB50F453 /* Pods_Enso_Liminal.framework */,
