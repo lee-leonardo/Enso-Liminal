@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		381717411AE21750000E4648 /* english.js in Resources */ = {isa = PBXBuildFile; fileRef = 3817173F1AE21750000E4648 /* english.js */; };
-		381717421AE21750000E4648 /* noNode_hyper.js in Resources */ = {isa = PBXBuildFile; fileRef = 381717401AE21750000E4648 /* noNode_hyper.js */; };
 		3880D6271AE472AD008DA736 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6251AE472AD008DA736 /* Crashlytics.framework */; };
 		3880D6281AE472AD008DA736 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6261AE472AD008DA736 /* Fabric.framework */; };
 		3880D62B1AE47330008DA736 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6291AE47330008DA736 /* TwitterKit.framework */; };
@@ -22,6 +20,8 @@
 		38A9225E1AD4F718002D1777 /* Enso_LiminalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9225D1AD4F718002D1777 /* Enso_LiminalTests.swift */; };
 		38A9226E1AD4FBDC002D1777 /* SyllableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A9226D1AD4FBDC002D1777 /* SyllableController.m */; };
 		38A922721AD4FD36002D1777 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A922711AD4FD36002D1777 /* JavaScriptCore.framework */; };
+		38D8E12F1AE7742800D8BBEC /* noNodehyper.js in Resources */ = {isa = PBXBuildFile; fileRef = 38D8E12A1AE770EF00D8BBEC /* noNodehyper.js */; };
+		38D8E1301AE7742800D8BBEC /* english.js in Resources */ = {isa = PBXBuildFile; fileRef = 3817173F1AE21750000E4648 /* english.js */; };
 		FE40E74E1AB8D093F24541C9 /* Pods_Enso_Liminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1948C5C39D09D5E1CB50F453 /* Pods_Enso_Liminal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,6 @@
 		0276E0A644B01BE6FB427A3B /* Pods-Enso Liminal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enso Liminal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Enso Liminal/Pods-Enso Liminal.debug.xcconfig"; sourceTree = "<group>"; };
 		1948C5C39D09D5E1CB50F453 /* Pods_Enso_Liminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Enso_Liminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3817173F1AE21750000E4648 /* english.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = english.js; path = "Enso Liminal/js/english.js"; sourceTree = "<group>"; };
-		381717401AE21750000E4648 /* noNode_hyper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = noNode_hyper.js; path = "Enso Liminal/js/noNode_hyper.js"; sourceTree = "<group>"; };
 		3880D6251AE472AD008DA736 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3880D6261AE472AD008DA736 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		3880D6291AE47330008DA736 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		38A9226D1AD4FBDC002D1777 /* SyllableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyllableController.m; sourceTree = "<group>"; };
 		38A9226F1AD4FC21002D1777 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		38A922711AD4FD36002D1777 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		38D8E12A1AE770EF00D8BBEC /* noNodehyper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = noNodehyper.js; path = "Enso Liminal/js/noNodehyper.js"; sourceTree = "<group>"; };
 		9290818A85D905FAE8393DFF /* Pods-Enso Liminal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enso Liminal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Enso Liminal/Pods-Enso Liminal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,8 +89,8 @@
 		3817173E1AE2173E000E4648 /* js */ = {
 			isa = PBXGroup;
 			children = (
+				38D8E12A1AE770EF00D8BBEC /* noNodehyper.js */,
 				3817173F1AE21750000E4648 /* english.js */,
-				381717401AE21750000E4648 /* noNode_hyper.js */,
 			);
 			name = js;
 			sourceTree = "<group>";
@@ -305,12 +305,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38D8E12F1AE7742800D8BBEC /* noNodehyper.js in Resources */,
+				38D8E1301AE7742800D8BBEC /* english.js in Resources */,
 				38A9224D1AD4F718002D1777 /* Main.storyboard in Resources */,
 				38A922521AD4F718002D1777 /* LaunchScreen.xib in Resources */,
 				38A9224F1AD4F718002D1777 /* Images.xcassets in Resources */,
-				381717421AE21750000E4648 /* noNode_hyper.js in Resources */,
 				3880D62C1AE47330008DA736 /* TwitterKitResources.bundle in Resources */,
-				381717411AE21750000E4648 /* english.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,18 +46,17 @@
     _hyphenationEngine = [[JSContext alloc] init];
     
     NSBundle *main = [NSBundle mainBundle];
-    NSString *hypherPath = [main pathForResource:@"noNode_hypher" ofType:@"js" inDirectory:@"js"];
-    NSLog(@"%@", hypherPath);
+    NSString *bundlePath = main.bundlePath;
+    NSLog(@"%@", bundlePath);
     
-    //TODO: Refactor Code to use these
-    NSArray *array = [[NSBundle mainBundle] pathsForResourcesOfType:@"js" inDirectory:@"js"];
-    NSLog(@"%@", array);
+    NSLog(@"%@", [main pathsForResourcesOfType:nil inDirectory:@"."]);
     
     
-    NSString *hypherFile = [[NSBundle mainBundle] pathForResource:@"noNode_hypher" ofType:@"js" inDirectory:@"js"];
+    
+    NSString *hypherFile = [[NSBundle mainBundle] pathForResource:@"noNodehypher" ofType:@"js" inDirectory:@"."];
     NSLog(@"%@", hypherFile);
     
-    NSString *englishLanguage = [[NSBundle mainBundle] pathForResource:@"english" ofType:@"js" inDirectory:@"js"];
+    NSString *englishLanguage = [[NSBundle mainBundle] pathForResource:@"english" ofType:@"js" inDirectory:@"."];
     
     NSLog(@"%@", englishLanguage);
     
