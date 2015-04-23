@@ -44,37 +44,15 @@
 -(void)setupHyphenationDictionary {
     _vm = [[JSVirtualMachine alloc] init];
     _hyphenationEngine = [[JSContext alloc] init];
-    
+
     NSBundle *main = [NSBundle mainBundle];
-    NSString *bundlePath = main.bundlePath;
-    NSLog(@"%@", bundlePath);
+    NSString *hypherPath = [main pathForResource:@"noNodehyper" ofType:@"js"];
     
-    NSLog(@"%@", [main pathsForResourcesOfType:nil inDirectory:@"."]);
+    //TODO: Do localization.
+    NSString *englishLanguagePath = [main pathForResource:@"english" ofType:@"js"];
     
-    
-    
-    NSString *hypherFile = [[NSBundle mainBundle] pathForResource:@"noNodehypher" ofType:@"js" inDirectory:@"."];
-    NSLog(@"%@", hypherFile);
-    
-    NSString *englishLanguage = [[NSBundle mainBundle] pathForResource:@"english" ofType:@"js" inDirectory:@"."];
-    
-    NSLog(@"%@", englishLanguage);
-    
-    //Refactor this out.
-//    NSError *error = [[NSError alloc] init];
-//    NSData *hyperFile = [NSData dataWithContentsOfFile:@"js/noNode_hypher.js" options:NSDataReadingMappedIfSafe error:&error];
-//    if (error != nil) {
-//        NSLog(@"Error Reading File: %@", error.localizedDescription);
-//    }
-//    NSString *hypher = [NSString stringWithUTF8String:[hyperFile bytes]] ;
-//    [_hyphenationEngine evaluateScript:hypher];
-//    
-//    NSData *englishFile = [NSData dataWithContentsOfFile:@"js/english" options:NSDataReadingMappedIfSafe error:&error];
-//    if (error != nil) {
-//        NSLog(@"Error Reading File: %@", error.localizedDescription);
-//    }
-//    NSString *english = [NSString stringWithUTF8String:[englishFile bytes]];
-//    [_hyphenationEngine evaluateScript:english];
+    [self loadScriptWithPath:hypherPath];
+    [self loadScriptWithPath:englishLanguagePath];
     
 }
 -(void)setupQueue {
@@ -90,7 +68,6 @@
     if (error != NULL) {
         NSLog(@"Error Reading File: %@", error.localizedDescription);
     } else {
-//        file
         NSString *js = [NSString stringWithUTF8String:[file bytes]];
         [_hyphenationEngine evaluateScript: js];
     }
