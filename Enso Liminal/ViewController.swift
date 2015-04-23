@@ -18,15 +18,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
-        let login = TWTRLogInButton { (session, error) -> Void in
-            if (error != nil) {
-                println(error.localizedDescription)
-            }
-        }
-        
-        login.center = self.view.center
-        self.view.addSubview(login)
     }
     
     override func viewWillAppear(animated: Bool) {

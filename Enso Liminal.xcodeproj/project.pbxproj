@@ -20,6 +20,7 @@
 		38A9225E1AD4F718002D1777 /* Enso_LiminalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9225D1AD4F718002D1777 /* Enso_LiminalTests.swift */; };
 		38A9226E1AD4FBDC002D1777 /* SyllableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A9226D1AD4FBDC002D1777 /* SyllableController.m */; };
 		38A922721AD4FD36002D1777 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A922711AD4FD36002D1777 /* JavaScriptCore.framework */; };
+		38D384A31AE8BD8B00D5783B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D384A21AE8BD8B00D5783B /* LoginViewController.swift */; };
 		38D8E12F1AE7742800D8BBEC /* noNodehyper.js in Resources */ = {isa = PBXBuildFile; fileRef = 38D8E12A1AE770EF00D8BBEC /* noNodehyper.js */; };
 		38D8E1301AE7742800D8BBEC /* english.js in Resources */ = {isa = PBXBuildFile; fileRef = 3817173F1AE21750000E4648 /* english.js */; };
 		FE40E74E1AB8D093F24541C9 /* Pods_Enso_Liminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1948C5C39D09D5E1CB50F453 /* Pods_Enso_Liminal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -59,6 +60,7 @@
 		38A9226D1AD4FBDC002D1777 /* SyllableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyllableController.m; sourceTree = "<group>"; };
 		38A9226F1AD4FC21002D1777 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		38A922711AD4FD36002D1777 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		38D384A21AE8BD8B00D5783B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38D8E12A1AE770EF00D8BBEC /* noNodehyper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = noNodehyper.js; path = "Enso Liminal/js/noNodehyper.js"; sourceTree = "<group>"; };
 		9290818A85D905FAE8393DFF /* Pods-Enso Liminal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enso Liminal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Enso Liminal/Pods-Enso Liminal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				38A922491AD4F718002D1777 /* ViewController.swift */,
+				38D384A21AE8BD8B00D5783B /* LoginViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				38A9224A1AD4F718002D1777 /* ViewController.swift in Sources */,
 				38A922451AD4F718002D1777 /* AppDelegate.swift in Sources */,
 				38A922481AD4F718002D1777 /* Enso_Liminal.xcdatamodeld in Sources */,
+				38D384A31AE8BD8B00D5783B /* LoginViewController.swift in Sources */,
 				38A9226E1AD4FBDC002D1777 /* SyllableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
