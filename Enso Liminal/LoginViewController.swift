@@ -30,12 +30,12 @@ class LoginViewController: UIViewController {
             }
         }
         
-        login.center = self.view.center
+        login.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 100)
         self.view.addSubview(login)
     }
     
 //MARK: - Facebook
     func setupFacebook() {
-        
+        let login = FBSDKLoginButton(frame: CGRectMake(<#x: CGFloat#>, <#y: CGFloat#>, <#width: CGFloat#>, <#height: CGFloat#>))
     }
 }
