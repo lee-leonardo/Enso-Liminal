@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38486C6C1AEA3EF3006B11F4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38486C6A1AEA3EF3006B11F4 /* Bolts.framework */; };
-		38486C6D1AEA3EF3006B11F4 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38486C6B1AEA3EF3006B11F4 /* FacebookSDK.framework */; };
-		38486C701AEA3FCE006B11F4 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38486C6E1AEA3FCE006B11F4 /* FBSDKCoreKit.framework */; };
-		38486C711AEA3FCE006B11F4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38486C6F1AEA3FCE006B11F4 /* FBSDKLoginKit.framework */; };
 		3880D6271AE472AD008DA736 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6251AE472AD008DA736 /* Crashlytics.framework */; };
 		3880D6281AE472AD008DA736 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6261AE472AD008DA736 /* Fabric.framework */; };
 		3880D62B1AE47330008DA736 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6291AE47330008DA736 /* TwitterKit.framework */; };
@@ -27,6 +23,10 @@
 		38D384A31AE8BD8B00D5783B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D384A21AE8BD8B00D5783B /* LoginViewController.swift */; };
 		38D8E12F1AE7742800D8BBEC /* noNodehyper.js in Resources */ = {isa = PBXBuildFile; fileRef = 38D8E12A1AE770EF00D8BBEC /* noNodehyper.js */; };
 		38D8E1301AE7742800D8BBEC /* english.js in Resources */ = {isa = PBXBuildFile; fileRef = 3817173F1AE21750000E4648 /* english.js */; };
+		38EB180A1AEC5B7B004FA394 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EB18071AEC5B7B004FA394 /* FBSDKCoreKit.framework */; };
+		38EB180B1AEC5B7B004FA394 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EB18081AEC5B7B004FA394 /* FBSDKLoginKit.framework */; };
+		38EB180C1AEC5B7B004FA394 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EB18091AEC5B7B004FA394 /* FBSDKShareKit.framework */; };
+		38EB18101AEC5BCB004FA394 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EB180E1AEC5BCB004FA394 /* FacebookSDK.framework */; };
 		FE40E74E1AB8D093F24541C9 /* Pods_Enso_Liminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1948C5C39D09D5E1CB50F453 /* Pods_Enso_Liminal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -44,10 +44,6 @@
 		0276E0A644B01BE6FB427A3B /* Pods-Enso Liminal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enso Liminal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Enso Liminal/Pods-Enso Liminal.debug.xcconfig"; sourceTree = "<group>"; };
 		1948C5C39D09D5E1CB50F453 /* Pods_Enso_Liminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Enso_Liminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3817173F1AE21750000E4648 /* english.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = english.js; path = "Enso Liminal/js/english.js"; sourceTree = "<group>"; };
-		38486C6A1AEA3EF3006B11F4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../../Documents/FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
-		38486C6B1AEA3EF3006B11F4 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		38486C6E1AEA3FCE006B11F4 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		38486C6F1AEA3FCE006B11F4 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		3880D6251AE472AD008DA736 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3880D6261AE472AD008DA736 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		3880D6291AE47330008DA736 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -70,6 +66,10 @@
 		38A922711AD4FD36002D1777 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		38D384A21AE8BD8B00D5783B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38D8E12A1AE770EF00D8BBEC /* noNodehyper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = noNodehyper.js; path = "Enso Liminal/js/noNodehyper.js"; sourceTree = "<group>"; };
+		38EB18071AEC5B7B004FA394 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		38EB18081AEC5B7B004FA394 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		38EB18091AEC5B7B004FA394 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		38EB180E1AEC5BCB004FA394 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		9290818A85D905FAE8393DFF /* Pods-Enso Liminal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enso Liminal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Enso Liminal/Pods-Enso Liminal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,15 +78,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38EB180C1AEC5B7B004FA394 /* FBSDKShareKit.framework in Frameworks */,
+				38EB18101AEC5BCB004FA394 /* FacebookSDK.framework in Frameworks */,
 				38A922721AD4FD36002D1777 /* JavaScriptCore.framework in Frameworks */,
+				38EB180A1AEC5B7B004FA394 /* FBSDKCoreKit.framework in Frameworks */,
 				3880D62B1AE47330008DA736 /* TwitterKit.framework in Frameworks */,
-				38486C711AEA3FCE006B11F4 /* FBSDKLoginKit.framework in Frameworks */,
 				3880D6271AE472AD008DA736 /* Crashlytics.framework in Frameworks */,
-				38486C6C1AEA3EF3006B11F4 /* Bolts.framework in Frameworks */,
+				38EB180B1AEC5B7B004FA394 /* FBSDKLoginKit.framework in Frameworks */,
 				FE40E74E1AB8D093F24541C9 /* Pods_Enso_Liminal.framework in Frameworks */,
-				38486C701AEA3FCE006B11F4 /* FBSDKCoreKit.framework in Frameworks */,
 				3880D6281AE472AD008DA736 /* Fabric.framework in Frameworks */,
-				38486C6D1AEA3EF3006B11F4 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,10 +215,10 @@
 		38CFF2DC1ADB50D1005DBC3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				38486C6E1AEA3FCE006B11F4 /* FBSDKCoreKit.framework */,
-				38486C6F1AEA3FCE006B11F4 /* FBSDKLoginKit.framework */,
-				38486C6A1AEA3EF3006B11F4 /* Bolts.framework */,
-				38486C6B1AEA3EF3006B11F4 /* FacebookSDK.framework */,
+				38EB180E1AEC5BCB004FA394 /* FacebookSDK.framework */,
+				38EB18071AEC5B7B004FA394 /* FBSDKCoreKit.framework */,
+				38EB18081AEC5B7B004FA394 /* FBSDKLoginKit.framework */,
+				38EB18091AEC5B7B004FA394 /* FBSDKShareKit.framework */,
 				3880D6291AE47330008DA736 /* TwitterKit.framework */,
 				3880D62A1AE47330008DA736 /* TwitterKitResources.bundle */,
 				3880D6251AE472AD008DA736 /* Crashlytics.framework */,
@@ -549,6 +549,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Enso Liminal/Enso Liminal-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -567,6 +568,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Enso Liminal/Enso Liminal-Bridging-Header.h";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
