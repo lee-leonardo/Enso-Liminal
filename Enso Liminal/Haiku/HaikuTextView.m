@@ -28,7 +28,8 @@
 }
 
 -(HaikuTextView *)initWithFrame:(CGRect)frame {
-    self = [self init];
+    //TODO: Grrr.
+    self = [[HaikuTextView alloc] init];
     
     CGFloat ratio = frame.size.height / frame.size.width;
     CGFloat golden = ratio / (5/7); //This is just an experiment.
@@ -38,6 +39,10 @@
     self.layer.masksToBounds = YES;
     
     return self;
+}
+
++(HaikuTextView *)createViewWithFrame:(CGRect)frame {
+    return [[HaikuTextView alloc] initWithFrame:frame];
 }
 
 @end

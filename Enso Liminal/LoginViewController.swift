@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
         
         self.setupTwitter()
         self.setupFacebook()
+        self.haikuView()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -39,5 +40,13 @@ class LoginViewController: UIViewController {
         let loginButton = FBSDKLoginButton()
         loginButton.center = CGPoint(x: self.view.center.x, y: self.view.center.y + 100)
         self.view.addSubview(loginButton)
+    }
+    
+    func haikuView() {
+        
+        let frame : CGRect = CGRectMake(50, 50, 100, 100)
+        var haikuView = HaikuTextView.createViewWithFrame(frame)
+        haikuView.backgroundColor = UIColor.blueColor()
+        self.view.addSubview(haikuView)
     }
 }

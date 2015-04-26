@@ -18,4 +18,7 @@
 @property (nonatomic) NSInteger *count;
 @property (nonatomic, strong) RACSignal *syllableCounter;
 
+
++(HaikuTextView *)createViewWithFrame:(CGRect)frame;
+
 @end
