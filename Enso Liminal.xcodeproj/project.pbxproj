@@ -27,6 +27,8 @@
 		38EB180B1AEC5B7B004FA394 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EB18081AEC5B7B004FA394 /* FBSDKLoginKit.framework */; };
 		38EB180C1AEC5B7B004FA394 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EB18091AEC5B7B004FA394 /* FBSDKShareKit.framework */; };
 		38EB18101AEC5BCB004FA394 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EB180E1AEC5BCB004FA394 /* FacebookSDK.framework */; };
+		38EB18141AEC5FD5004FA394 /* ELWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EB18131AEC5FD5004FA394 /* ELWriteViewController.swift */; };
+		38EB181E1AEC6336004FA394 /* HaikuTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EB181D1AEC6336004FA394 /* HaikuTextView.m */; };
 		FE40E74E1AB8D093F24541C9 /* Pods_Enso_Liminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1948C5C39D09D5E1CB50F453 /* Pods_Enso_Liminal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,9 @@
 		38EB18081AEC5B7B004FA394 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		38EB18091AEC5B7B004FA394 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		38EB180E1AEC5BCB004FA394 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		38EB18131AEC5FD5004FA394 /* ELWriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELWriteViewController.swift; sourceTree = "<group>"; };
+		38EB181C1AEC6336004FA394 /* HaikuTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HaikuTextView.h; path = Haiku/HaikuTextView.h; sourceTree = "<group>"; };
+		38EB181D1AEC6336004FA394 /* HaikuTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HaikuTextView.m; path = Haiku/HaikuTextView.m; sourceTree = "<group>"; };
 		9290818A85D905FAE8393DFF /* Pods-Enso Liminal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enso Liminal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Enso Liminal/Pods-Enso Liminal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +119,7 @@
 			children = (
 				38A922491AD4F718002D1777 /* ViewController.swift */,
 				38D384A21AE8BD8B00D5783B /* LoginViewController.swift */,
+				38EB18131AEC5FD5004FA394 /* ELWriteViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -197,8 +203,8 @@
 		38A922691AD4FB66002D1777 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				38A9224B1AD4F718002D1777 /* Main.storyboard */,
-				38A922501AD4F718002D1777 /* LaunchScreen.xib */,
+				38EB18161AEC6285004FA394 /* Haiku Views */,
+				38EB18151AEC6279004FA394 /* Nib-Storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -229,6 +235,24 @@
 				1948C5C39D09D5E1CB50F453 /* Pods_Enso_Liminal.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38EB18151AEC6279004FA394 /* Nib-Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				38A9224B1AD4F718002D1777 /* Main.storyboard */,
+				38A922501AD4F718002D1777 /* LaunchScreen.xib */,
+			);
+			name = "Nib-Storyboard";
+			sourceTree = "<group>";
+		};
+		38EB18161AEC6285004FA394 /* Haiku Views */ = {
+			isa = PBXGroup;
+			children = (
+				38EB181C1AEC6336004FA394 /* HaikuTextView.h */,
+				38EB181D1AEC6336004FA394 /* HaikuTextView.m */,
+			);
+			name = "Haiku Views";
 			sourceTree = "<group>";
 		};
 		5FAA9F8EA7F29239936BE389 /* Pods */ = {
@@ -409,7 +433,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				38A9224A1AD4F718002D1777 /* ViewController.swift in Sources */,
+				38EB18141AEC5FD5004FA394 /* ELWriteViewController.swift in Sources */,
 				38A922451AD4F718002D1777 /* AppDelegate.swift in Sources */,
+				38EB181E1AEC6336004FA394 /* HaikuTextView.m in Sources */,
 				38A922481AD4F718002D1777 /* Enso_Liminal.xcdatamodeld in Sources */,
 				38D384A31AE8BD8B00D5783B /* LoginViewController.swift in Sources */,
 				38A9226E1AD4FBDC002D1777 /* SyllableController.m in Sources */,
