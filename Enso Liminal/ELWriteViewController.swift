@@ -25,6 +25,16 @@ class ELWriteViewController: UIViewController {
     }
     
     
+    func subscribeSignal() {
+        var lettersSig = "A B C D E F G H I".componentsSeparatedByString(" ")
+        var signal = lettersSig.rac_textSignal().subscribeNext {
+        (next: AnyObject!) -> () in
+            if let text = next as? String {
+                println(countElements(text))
+            }
+        }
+    }
+    
     
 
 }

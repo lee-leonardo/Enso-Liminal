@@ -4,6 +4,7 @@
 
 #import "SyllableController.h"
 #import <POP/pop.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
