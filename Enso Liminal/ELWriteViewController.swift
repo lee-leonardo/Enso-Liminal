@@ -16,7 +16,7 @@ class ELWriteViewController: UIViewController {
         super.viewDidLoad()
         
         let frame = CGRectMake(self.view.frame.width / 4, self.view.frame.height / 3, self.view.frame.width * 2 / 3, self.view.frame.height * 3 / 4)
-        self.haikuView = UITextView(frame: frame)
+        self.haikuView = HaikuTextView(frame: frame)
         self.view.addSubview(haikuView)
     }
     

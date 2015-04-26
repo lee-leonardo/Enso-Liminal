@@ -8,41 +8,36 @@
 
 #import "HaikuTextView.h"
 
+@interface HaikuTextView ()
+
+@end
+
 @implementation HaikuTextView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
-- (HaikuTextView *)init
-{
-    self = [super init];
-    if (self) {
-        self.count = 0;
-    }
-    return self;
-}
-
 -(HaikuTextView *)initWithFrame:(CGRect)frame {
-    //TODO: Grrr.
-    self = [[HaikuTextView alloc] init];
-    
-    CGFloat ratio = frame.size.height / frame.size.width;
-    CGFloat golden = ratio / (5/7); //This is just an experiment.
-    
-    self.frame = frame;
-    self.layer.cornerRadius = golden;
-    self.layer.masksToBounds = YES;
+    self = [super initWithFrame:frame];
     
     return self;
 }
 
 +(HaikuTextView *)createViewWithFrame:(CGRect)frame {
-    return [[HaikuTextView alloc] initWithFrame:frame];
+    HaikuTextView *textView = [[self alloc] initWithFrame:frame];
+    [textView maskingSetup];
+    [textView reactiveCountSetup];
+    
+    return textView;
 }
+
+-(void)maskingSetup {
+    CGFloat ratio = self.frame.size.width / 8;
+    self.layer.cornerRadius = ratio;
+    self.layer.masksToBounds = YES;
+}
+
+-(void)reactiveCountSetup {
+    
+}
+
+#pragma mark -
 
 @end

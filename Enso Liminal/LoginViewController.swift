@@ -43,10 +43,10 @@ class LoginViewController: UIViewController {
     }
     
     func haikuView() {
-        
         let frame : CGRect = CGRectMake(50, 50, 100, 100)
         var haikuView = HaikuTextView.createViewWithFrame(frame)
         haikuView.backgroundColor = UIColor.blueColor()
+        haikuView.textColor = UIColor.lightGrayColor()
         self.view.addSubview(haikuView)
     }
 }
