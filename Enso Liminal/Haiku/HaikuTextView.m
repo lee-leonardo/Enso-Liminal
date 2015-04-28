@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Leonardo Lee. All rights reserved.
 //
 
-#import "Enso_Liminal-Swift.h"
 #import "HaikuTextView.h"
 #import "SyllableController.h"
+#import "Enso_Liminal-Swift.h"
 
 @interface HaikuTextView ()
 
@@ -18,6 +18,7 @@
 
 @implementation HaikuTextView
 
+#pragma mark - Initialization
 -(HaikuTextView *)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     
@@ -41,6 +42,8 @@
     return textView;
 }
 
+
+#pragma mark - Setup
 -(void)maskingSetup {
     CGFloat ratio = self.frame.size.width / 8;
     self.layer.cornerRadius = ratio;
@@ -48,8 +51,10 @@
 }
 
 -(void)reactiveCountSetup {
-//    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {}];
-
+    //Not complete yet, need to test and see what I should do with it.
+    [self.rac_textSignal subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
 }
 
 #pragma mark -

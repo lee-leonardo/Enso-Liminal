@@ -48,5 +48,11 @@ class LoginViewController: UIViewController {
         haikuView.backgroundColor = UIColor.blueColor()
         haikuView.textColor = UIColor.lightGrayColor()
         self.view.addSubview(haikuView)
+        
+        //Reactive Cocoa implementation in swift... looks nice, but I got to work on it more.
+//        haikuView.rac_textSignal().subscribeNext {
+//            (next) -> Void in
+//            println(next)
+//        }
     }
 }
