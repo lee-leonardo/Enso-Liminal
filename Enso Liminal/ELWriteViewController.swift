@@ -27,14 +27,24 @@ class ELWriteViewController: UIViewController {
     
     func subscribeSignal() {
         var lettersSig = "A B C D E F G H I".componentsSeparatedByString(" ")
-        var signal = lettersSig.rac_textSignal().subscribeNext {
-        (next: AnyObject!) -> () in
-            if let text = next as? String {
-                println(countElements(text))
+        
+        
+        rac_signalForSelector("thisIsASelector:").subscribeNext {
+            (next) -> Void in
+            if let string = next as? String {
+                println(string)
             }
         }
+//        var signal = lettersSig.rac_textSignal().subscribeNext {
+//        (next: AnyObject!) -> () in
+//            if let text = next as? String {
+//                println(countElements(text))
+//            }
+//        }
     }
     
+    func thisIsASelector(haiku: HaikuTextView) {
+        
+    }
     
-
 }

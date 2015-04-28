@@ -7,8 +7,11 @@
 //
 
 #import "HaikuTextView.h"
+#import "SyllableController.h"
 
 @interface HaikuTextView ()
+
+@property (nonatomic, strong) SyllableController *sharedSyllableController;
 
 @end
 
@@ -28,6 +31,15 @@
     return textView;
 }
 
++(HaikuTextView *)createViewWithFrame:(CGRect)frame
+               withSyllableController:(SyllableController *)controller {
+    
+    HaikuTextView *textView = [self createViewWithFrame:frame];
+    textView.sharedSyllableController = controller;
+    
+    return textView;
+}
+
 -(void)maskingSetup {
     CGFloat ratio = self.frame.size.width / 8;
     self.layer.cornerRadius = ratio;
@@ -35,9 +47,11 @@
 }
 
 -(void)reactiveCountSetup {
-    
+//    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {}];
+
 }
 
 #pragma mark -
+
 
 @end
