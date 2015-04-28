@@ -20,5 +20,7 @@
 
 
 +(HaikuTextView *)createViewWithFrame:(CGRect)frame;
++(HaikuTextView *)createViewWithFrame:(CGRect)frame
+               withSyllableController:(SyllableController *)controller;
 
 @end

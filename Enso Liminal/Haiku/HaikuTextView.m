@@ -6,12 +6,13 @@
 //  Copyright (c) 2015 Leonardo Lee. All rights reserved.
 //
 
+#import "Enso_Liminal-Swift.h"
 #import "HaikuTextView.h"
 #import "SyllableController.h"
 
 @interface HaikuTextView ()
 
-@property (nonatomic, strong) SyllableController *sharedSyllableController;
+@property (nonatomic, strong) SyllableController *syllableController;
 
 @end
 
@@ -35,7 +36,7 @@
                withSyllableController:(SyllableController *)controller {
     
     HaikuTextView *textView = [self createViewWithFrame:frame];
-    textView.sharedSyllableController = controller;
+    textView.syllableController = [SyllableController sharedInstance];
     
     return textView;
 }
