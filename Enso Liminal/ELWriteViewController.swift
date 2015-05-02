@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ELWriteViewController: UIViewController {
+class ELWriteViewController: UIViewController, UITextViewDelegate {
 
     var haikuView : UITextView!
     
@@ -47,4 +47,20 @@ class ELWriteViewController: UIViewController {
         
     }
     
+    //MARK: - UITextViewDelegate
+//    func textViewDidChange(textView: UITextView) {
+//        //
+//    }
+
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        
+        let disallowedCharacters : NSCharacterSet = NSCharacterSet(charactersInString: "1234567890!@#$#%^&*()`~-_=+[{]}\\|,.<>/?;:'\"")
+        let revisedString = text.stringByTrimmingCharactersInSet(disallowedCharacters)
+        
+//        text.compare(<#aString: String#>, options: <#NSStringCompareOptions#>, range: <#Range<String.Index>?#>, locale: <#NSLocale?#>)
+        
+        switch revisedString {
+            
+        }
+    }
 }
