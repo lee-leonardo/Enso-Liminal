@@ -54,13 +54,16 @@ class ELWriteViewController: UIViewController, UITextViewDelegate {
 
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         
-        let disallowedCharacters : NSCharacterSet = NSCharacterSet(charactersInString: "1234567890!@#$#%^&*()`~-_=+[{]}\\|,.<>/?;:'\"")
-        let revisedString = text.stringByTrimmingCharactersInSet(disallowedCharacters)
+        var regexp = "`1234567890-=~!@#$%^&*()_+[]\\{}|;':\",./<>?";
+
+        var checkingString = text.rangeOfString(regexp, options: NSStringCompareOptions.RegularExpressionSearch, range: nil, locale: nil)
         
-//        text.compare(<#aString: String#>, options: <#NSStringCompareOptions#>, range: <#Range<String.Index>?#>, locale: <#NSLocale?#>)
-        
-        switch revisedString {
-            
+        //Got to think about this to see if this is a good way to do it... a bit hard to read.
+        if checkingString != nil {
+            if checkingString!.isEmpty {
+                return true
+            }
         }
+        return checkingString?.isEmpty == nil
     }
 }
