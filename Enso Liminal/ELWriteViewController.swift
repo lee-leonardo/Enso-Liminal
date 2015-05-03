@@ -20,11 +20,8 @@ class ELWriteViewController: UIViewController, UITextViewDelegate {
         self.view.addSubview(haikuView)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-    }
     
-    
+    //MARK: Signal Stuff
     func subscribeSignal() {
         var lettersSig = "A B C D E F G H I".componentsSeparatedByString(" ")
         
@@ -48,22 +45,21 @@ class ELWriteViewController: UIViewController, UITextViewDelegate {
     }
     
     //MARK: - UITextViewDelegate
-//    func textViewDidChange(textView: UITextView) {
-//        //
-//    }
-
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        return self.isValidString(text)
+    }
+    
+    //Works currently only for alphanumeric characters and if they are lower case...
+    func isValidString(text: String) -> Bool {
         
-        var regexp = "`1234567890-=~!@#$%^&*()_+[]\\{}|;':\",./<>?";
-
-        var checkingString = text.rangeOfString(regexp, options: NSStringCompareOptions.RegularExpressionSearch, range: nil, locale: nil)
+        //The pattern I desire... but the \[ and \] are troublesome...
+        //"[~`@#$%^&*()-_=+\[\]\|{}\\;':\"<>]"
+        var pattern = "[~`@#$%^&*()-_=+{}\\;:\"<>]"
+        var ifContains = text.rangeOfString(pattern, options: NSStringCompareOptions.RegularExpressionSearch, range: nil, locale: nil)
         
-        //Got to think about this to see if this is a good way to do it... a bit hard to read.
-        if checkingString != nil {
-            if checkingString!.isEmpty {
-                return true
-            }
+        if ifContains?.isEmpty != nil {
+            return false
         }
-        return checkingString?.isEmpty == nil
+        return true
     }
 }

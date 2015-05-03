@@ -29,19 +29,10 @@
     HaikuTextView *textView = [[self alloc] initWithFrame:frame];
     [textView maskingSetup];
     [textView reactiveCountSetup];
-    
-    return textView;
-}
-
-+(HaikuTextView *)createViewWithFrame:(CGRect)frame
-               withSyllableController:(SyllableController *)controller {
-    
-    HaikuTextView *textView = [self createViewWithFrame:frame];
     textView.syllableController = [SyllableController sharedInstance];
     
     return textView;
 }
-
 
 #pragma mark - Setup
 -(void)maskingSetup {
@@ -54,6 +45,7 @@
     //Not complete yet, need to test and see what I should do with it.
     [self.rac_textSignal subscribeNext:^(id x) {
         NSLog(@"%@", x);
+        //self.syllableCount =
     }];
 }
 
