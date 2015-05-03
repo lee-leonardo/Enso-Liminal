@@ -49,7 +49,14 @@
     }];
 }
 
-#pragma mark -
+#pragma mark - Characters
+-(BOOL)notAllowedCharacters:(char *)character {
+    NSCharacterSet *disallowed = [NSCharacterSet characterSetWithCharactersInString:@"[~`@#$%^&*()-_=+{}\\;:\"<>]"];
+    
+    return [disallowed characterIsMember:(short)character];
+    
+}
+
 
 
 @end

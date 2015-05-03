@@ -21,4 +21,6 @@
 
 +(HaikuTextView *)createViewWithFrame:(CGRect)frame;
 
+-(BOOL)notAllowedCharacters:(char *)character;
+
 @end

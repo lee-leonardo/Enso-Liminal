@@ -11,6 +11,7 @@ import UIKit
 class ELWriteViewController: UIViewController, UITextViewDelegate {
 
     var haikuView : UITextView!
+    var stringCheck : NSRegularExpression!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,15 @@ class ELWriteViewController: UIViewController, UITextViewDelegate {
     
     //MARK: - UITextViewDelegate
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        return self.isValidString(text)
+        
+        var changes = text.componentsSeparatedByString(textView.text)
+        for theString in changes {
+            println(theString)
+//            if let theChar = theString as? Character {
+//            }
+        }
+        
+        return true
     }
     
     //Works currently only for alphanumeric characters and if they are lower case...
