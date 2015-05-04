@@ -13,6 +13,8 @@
 @interface HaikuTextView ()
 
 @property (nonatomic, strong) SyllableController *syllableController;
+@property (nonatomic, strong) NSRegularExpression *checkingExpression;
+@property (nonatomic, copy) void (^stringCheckBlock)(NSTextCheckingResult *result,NSMatchingFlags flags, BOOL *stop);
 
 @end
 
@@ -28,6 +30,7 @@
 +(HaikuTextView *)createViewWithFrame:(CGRect)frame {
     HaikuTextView *textView = [[self alloc] initWithFrame:frame];
     [textView maskingSetup];
+    [textView checkingExpressionSetup];
     [textView reactiveCountSetup];
     textView.syllableController = [SyllableController sharedInstance];
     
@@ -41,20 +44,50 @@
     self.layer.masksToBounds = YES;
 }
 
+-(void)checkingExpressionSetup {
+    NSString *disallowedCharacters = @"[~`@#$%^&*()-_=+{}\\;:\"<>]";
+    NSError *error = NULL;
+    NSRegularExpression *toCheckAgainst = [NSRegularExpression regularExpressionWithPattern:disallowedCharacters options:NSRegularExpressionCaseInsensitive error:&error];
+    
+    if (error != NULL) {
+        NSLog(@"%@", error.localizedDescription);
+        
+    } else {
+        self.checkingExpression = toCheckAgainst;
+        
+    }
+    
+    typedef void (^StringCheck)(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop);
+    StringCheck checkString = ^void(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+        //
+    };
+    self.stringCheckBlock = checkString;
+}
+
 -(void)reactiveCountSetup {
     //Not complete yet, need to test and see what I should do with it.
-    [self.rac_textSignal subscribeNext:^(id x) {
-        NSLog(@"%@", x);
+    [[self.rac_textSignal
+      filter:^BOOL(NSString *givenString) {
+        return [self checkString:givenString];
+    }]
+     subscribeNext:^(NSString *updatedString) {
+        NSLog(@"String: %@", updatedString);
+        NSLog(@"Length: %li", (long)updatedString.length);
         //self.syllableCount =
     }];
 }
 
 #pragma mark - Characters
--(BOOL)notAllowedCharacters:(char *)character {
-    NSCharacterSet *disallowed = [NSCharacterSet characterSetWithCharactersInString:@"[~`@#$%^&*()-_=+{}\\;:\"<>]"];
+
+//TODO: Break this into two functions.
+-(BOOL)checkString:(NSString *)given {
+    [self.checkingExpression enumerateMatchesInString:given
+                                              options:0
+                                                range:NSMakeRange(0, given.length)
+                                           usingBlock:self.stringCheckBlock];
     
-    return [disallowed characterIsMember:(short)character];
-    
+    return ([given rangeOfString:self.checkingExpression.pattern].location != NSNotFound) ? false : true;
+
 }
 
 

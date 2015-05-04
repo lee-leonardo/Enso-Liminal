@@ -9,7 +9,7 @@
 import UIKit
 import TwitterKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
