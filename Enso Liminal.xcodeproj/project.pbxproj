@@ -29,6 +29,7 @@
 		38EB18101AEC5BCB004FA394 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EB180E1AEC5BCB004FA394 /* FacebookSDK.framework */; };
 		38EB18141AEC5FD5004FA394 /* ELWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EB18131AEC5FD5004FA394 /* ELWriteViewController.swift */; };
 		38EB181E1AEC6336004FA394 /* HaikuTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EB181D1AEC6336004FA394 /* HaikuTextView.m */; };
+		38F66A9C1AFF256F0094764C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F66A9B1AFF256F0094764C /* Constants.m */; };
 		FE40E74E1AB8D093F24541C9 /* Pods_Enso_Liminal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1948C5C39D09D5E1CB50F453 /* Pods_Enso_Liminal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,8 @@
 		38EB18131AEC5FD5004FA394 /* ELWriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELWriteViewController.swift; sourceTree = "<group>"; };
 		38EB181C1AEC6336004FA394 /* HaikuTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HaikuTextView.h; path = Haiku/HaikuTextView.h; sourceTree = "<group>"; };
 		38EB181D1AEC6336004FA394 /* HaikuTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HaikuTextView.m; path = Haiku/HaikuTextView.m; sourceTree = "<group>"; };
+		38F66A9A1AFF256F0094764C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		38F66A9B1AFF256F0094764C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		9290818A85D905FAE8393DFF /* Pods-Enso Liminal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enso Liminal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Enso Liminal/Pods-Enso Liminal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +150,8 @@
 		38A922411AD4F718002D1777 /* Enso Liminal */ = {
 			isa = PBXGroup;
 			children = (
+				38F66A9A1AFF256F0094764C /* Constants.h */,
+				38F66A9B1AFF256F0094764C /* Constants.m */,
 				38A9226B1AD4FBDC002D1777 /* Enso Liminal-Bridging-Header.h */,
 				38A922441AD4F718002D1777 /* AppDelegate.swift */,
 				38A922681AD4FB60002D1777 /* Model */,
@@ -435,6 +440,7 @@
 				38A9224A1AD4F718002D1777 /* ViewController.swift in Sources */,
 				38EB18141AEC5FD5004FA394 /* ELWriteViewController.swift in Sources */,
 				38A922451AD4F718002D1777 /* AppDelegate.swift in Sources */,
+				38F66A9C1AFF256F0094764C /* Constants.m in Sources */,
 				38EB181E1AEC6336004FA394 /* HaikuTextView.m in Sources */,
 				38A922481AD4F718002D1777 /* Enso_Liminal.xcdatamodeld in Sources */,
 				38D384A31AE8BD8B00D5783B /* LoginViewController.swift in Sources */,

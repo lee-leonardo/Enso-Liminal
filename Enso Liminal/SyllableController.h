@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <JavaScriptCore/JavaScriptCore.h>
 
+#import "Constants.h"
+
 @interface SyllableController : NSObject
 
 @property (nonatomic, strong) JSVirtualMachine *vm;
@@ -16,5 +18,9 @@
 @property (nonatomic, strong) NSOperationQueue *syllableQueue;
 
 +(SyllableController *)sharedInstance;
+
+-(NSUInteger)getSyllableCount;
+-(void)startListeningForPosts;
+-(void)stopListeningForPosts;
 
 @end

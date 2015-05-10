@@ -60,6 +60,7 @@
     typedef void (^StringCheck)(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop);
     StringCheck checkString = ^void(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
         //
+        
     };
     self.stringCheckBlock = checkString;
 }
@@ -90,6 +91,13 @@
 
 }
 
-
+#pragma mark - Syllable Messaging
+-(void)sendHaikuText:(NSString *)haikuText {
+    NSDictionary *notification = [NSDictionary dictionaryWithObjectsAndKeys:@"", self.text, nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:EL_Haiku_Post
+                                                        object:self
+                                                      userInfo:notification];
+}
 
 @end

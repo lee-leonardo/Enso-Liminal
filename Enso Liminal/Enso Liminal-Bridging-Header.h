@@ -13,3 +13,4 @@
 
 #pragma mark - Haiku Files
 #import "HaikuTextView.h"
+#import "Constants.h"

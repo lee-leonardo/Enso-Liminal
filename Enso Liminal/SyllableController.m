@@ -8,13 +8,6 @@
 
 #import "SyllableController.h"
 
-@protocol SyllableControllerDelegate <NSObject>
-
--(void)sendStringToHyphenate:(NSString *)toHyphenate;
--(void)listenForSyllableCount;
-
-@end
-
 @implementation SyllableController
 
 #pragma mark - Init
@@ -71,7 +64,23 @@
         NSString *js = [NSString stringWithUTF8String:[file bytes]];
         [_hyphenationEngine evaluateScript: js];
     }
+}
 
+#pragma mark - Notification Center
+-(void)startListeningForPosts {
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter addObserverForName:EL_Haiku_Post object:self queue:_syllableQueue usingBlock:^(NSNotification *note) {
+        NSDictionary *latestPost = [note userInfo];
+        NSString *haikuPosted = latestPost[@"haiku"];
+        
+        [self hyphenateText:haikuPosted];
+    }];
+    
+}
+
+-(void)stopListeningForPosts {
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter removeObserver:self name:EL_Haiku_Post object:nil];
 }
 
 #pragma mark - Hyphenation and Syllables
