@@ -50,7 +50,7 @@
     NSRegularExpression *toCheckAgainst = [NSRegularExpression regularExpressionWithPattern:disallowedCharacters options:NSRegularExpressionCaseInsensitive error:&error];
     
     if (error != NULL) {
-        NSLog(@"%@", error.localizedDescription);
+        NSLog(@"Haiku Text View Error: %@", error.localizedDescription);
         
     } else {
         self.checkingExpression = toCheckAgainst;
@@ -72,9 +72,9 @@
         return [self checkString:givenString];
     }]
      subscribeNext:^(NSString *updatedString) {
-        NSLog(@"String: %@", updatedString);
-        NSLog(@"Length: %li", (long)updatedString.length);
-        //self.syllableCount =
+        NSLog(@"Received String: %@", updatedString);
+        NSLog(@"Received String Length: %li", (long)updatedString.length);
+         self.syllableCount = [_syllableController getSyllableCount];
     }];
 }
 

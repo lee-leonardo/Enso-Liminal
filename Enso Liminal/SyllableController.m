@@ -8,6 +8,12 @@
 
 #import "SyllableController.h"
 
+@interface SyllableController ()
+
+@property (nonatomic, strong) JSValue *hyphenatedText;
+
+@end
+
 @implementation SyllableController
 
 #pragma mark - Init
@@ -47,6 +53,25 @@
     [self loadScriptWithPath:hypherPath];
     [self loadScriptWithPath:englishLanguagePath];
     
+    
+    //TODO: Fix
+    JSValue *result = [_hyphenationEngine evaluateScript:@"var kumon = h.hyphenateText('Architeryles')"];
+    NSLog(@"Returned Result: %i", [result toInt32]);
+    NSLog(@"Kumon Text: %@", _hyphenationEngine[@"kumon"]);
+    
+    JSValue *huh = [_hyphenationEngine evaluateScript:@"h"];
+    NSLog(@"%@", huh);
+    
+    
+    result = [_hyphenationEngine evaluateScript:@"h.hyphenateText('Architeryles')"];
+    NSLog(@"Returned Result: %@", [result toString]);
+    
+    
+    [_hyphenationEngine evaluateScript:@"a = 10"];
+    JSValue *newVal = _hyphenationEngine[@"a"];
+    NSLog(@"New Value Integer: %i", [newVal toInt32]);
+    
+    
 }
 -(void)setupQueue {
     _syllableQueue = [[NSOperationQueue alloc] init];
@@ -57,9 +82,10 @@
 -(void)loadScriptWithPath:(NSString *)path {
     NSError *error;
     NSData *file = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:&error];
+    NSLog(@"Loading Script: %@\n%@", path, [file bytes]);
     
     if (error != NULL) {
-        NSLog(@"Error Reading File: %@", error.localizedDescription);
+        NSLog(@"Unlable to load file path: %@\nError Reading File: %@", path, error.localizedDescription);
     } else {
         NSString *js = [NSString stringWithUTF8String:[file bytes]];
         [_hyphenationEngine evaluateScript: js];
@@ -92,10 +118,6 @@
     }];
 }
 
--(void)broadCastSyllableCount {
-//    [self performSelector:@(getSyllableCount) withObject:nil afterDelay:2.0];
-}
-
 #pragma mark Interacts with JavascriptCore
 -(void)hyphenateText:(NSString *)haiku {
     NSString *jsMethod = [NSString stringWithFormat:@"var output = h.hyphenateText(%@)", haiku];
@@ -104,8 +126,8 @@
 }
 
 -(NSUInteger)getSyllableCount {
-    JSValue *retrieveString = _hyphenationEngine[@"output"];
-    NSString *hyphenatedString = [retrieveString toString];
+    _hyphenatedText = _hyphenationEngine[@"output"];
+    NSString *hyphenatedString = [_hyphenatedText toString];
     hyphenatedString = [hyphenatedString stringByReplacingOccurrencesOfString:@" " withString:@"-"];
     NSArray *syllables = [hyphenatedString componentsSeparatedByString:@"-"];
     

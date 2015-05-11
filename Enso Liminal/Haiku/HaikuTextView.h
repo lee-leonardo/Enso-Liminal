@@ -16,7 +16,7 @@
 
 @interface HaikuTextView : UITextView
 
-@property (nonatomic) NSInteger *syllableCount;
+@property (nonatomic) NSUInteger syllableCount;
 @property (nonatomic, strong) RACSignal *syllableCounter;
 
 +(HaikuTextView *)createViewWithFrame:(CGRect)frame;

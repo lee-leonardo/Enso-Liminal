@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-extern const NSString *EL_Haiku_Post;
+extern NSString *EL_Haiku_Post;
 
 @interface Constants : NSObject
 
