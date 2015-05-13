@@ -82,7 +82,6 @@
 -(void)loadScriptWithPath:(NSString *)path {
     NSError *error;
     NSData *file = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:&error];
-    NSLog(@"Loading Script: %@\n%@", path, [file bytes]);
     
     if (error != NULL) {
         NSLog(@"Unlable to load file path: %@\nError Reading File: %@", path, error.localizedDescription);
@@ -120,8 +119,21 @@
 
 #pragma mark Interacts with JavascriptCore
 -(void)hyphenateText:(NSString *)haiku {
-    NSString *jsMethod = [NSString stringWithFormat:@"var output = h.hyphenateText(%@)", haiku];
+    
+    JSValue *script = _hyphenationEngine[@"h"];
+    NSString *hyper = [script toString];
+    NSLog(@"This should be hyper:\n%@", hyper);
+    
+    
+    NSString *jsMethod = [NSString stringWithFormat:@"var output = h.hyphenateText(%@);", haiku];
     [_hyphenationEngine evaluateScript:jsMethod];
+    
+    /*
+     TODO: 
+     I think the problem is garbage collection, the JIT is destroying values before it is grabbed.
+     Also the scripts might also be garbage collected before I am able to grab values from them.
+     */
+    
     
 }
 
