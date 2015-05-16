@@ -10,6 +10,7 @@
 
 @interface SyllableController ()
 
+@property (nonatomic, strong) JSVirtualMachine *vm;
 @property (nonatomic, strong) JSValue *hyphenatedText;
 
 @end
@@ -50,26 +51,74 @@
     //TODO: Do localization.
     NSString *englishLanguagePath = [main pathForResource:@"english" ofType:@"js"];
     
-    [self loadScriptWithPath:hypherPath];
-    [self loadScriptWithPath:englishLanguagePath];
+    NSString *hypherScript = [self getScriptWithPath:hypherPath];
+    NSString *englishScript = [self getScriptWithPath:englishLanguagePath];
+    
+    NSString *concatScript = [NSString stringWithFormat:@"%@" "%@", hypherScript, englishScript];
+    
+    NSLog(@"%@", hypherScript);
+    NSLog(@"%@", englishScript);
+    NSLog(@"%@", concatScript);
+    [self loadScript:concatScript];
     
     
-    //TODO: Fix
-    JSValue *result = [_hyphenationEngine evaluateScript:@"var kumon = h.hyphenateText('Architeryles')"];
-    NSLog(@"Returned Result: %i", [result toInt32]);
-    NSLog(@"Kumon Text: %@", _hyphenationEngine[@"kumon"]);
+    //This demonstrates that even though my script is valid input, there's something wrong in the translation of it into code that the engine can use....
+    // Hyphenation
     
-    JSValue *huh = [_hyphenationEngine evaluateScript:@"h"];
-    NSLog(@"%@", huh);
+    JSValue *hypher = _hyphenationEngine[@"Hyper"];
+    JSValue *trie = _hyphenationEngine[@"Hyper.prototype.createTrie"];
+    JSValue *hyphenate = _hyphenationEngine[@"Hyper.prototype.hyphenateText"];
+    JSValue *english = _hyphenationEngine[@"english"];
+    JSValue *h = _hyphenationEngine[@"h"];
+    NSLog(@"Hyper: %@", hypher);
+    NSLog(@"Trie: %@", trie);
+    NSLog(@"Hyphenate: %@", hyphenate);
+    NSLog(@"English: %@", english);
+    NSLog(@"h: %@", h);
+    
+//    _hyphenationEngine[@"output"] = @"";
+    //Listen in on output?
     
     
-    result = [_hyphenationEngine evaluateScript:@"h.hyphenateText('Architeryles')"];
-    NSLog(@"Returned Result: %@", [result toString]);
+    //Testing to see if the engine is working... It's receiving the script as text... so it should be working right... I might just pull out the VM and make it a singleton with references to the scripts and create the hyphenation engines as objects owned by the text views, it would simplify the flow a lot.
     
+    //Can treat contexts like dictionaries.
+    _hyphenationEngine[@"a"] = @5;
+    NSLog(@"%d", [_hyphenationEngine[@"a"] toInt32]);
     
+    //With scripting
     [_hyphenationEngine evaluateScript:@"a = 10"];
-    JSValue *newVal = _hyphenationEngine[@"a"];
-    NSLog(@"New Value Integer: %i", [newVal toInt32]);
+    JSValue *newValue = _hyphenationEngine[@"a"];
+    NSLog(@"%d", [newValue toUInt32]);
+    
+    // Creating a variable.
+    [_hyphenationEngine evaluateScript:@"var square = function(x){returnx*x};"];
+    JSValue *squareFunc = _hyphenationEngine[@"square"];
+    NSLog(@"%@", squareFunc);
+    
+    // Calling a function with C-level arguments.
+    JSValue *fourSquared = [squareFunc callWithArguments:@[@4]];
+    NSLog(@"4^2=%@", fourSquared);
+    
+    
+    //Creating a function with a block.
+    _hyphenationEngine[@"factorial"] = ^(int x) {
+        int factorial = 1;
+        for (; x > 1; x--) {
+            factorial *= x;
+        }
+        return factorial;
+    };
+    [_hyphenationEngine evaluateScript:@"var fiveFactorial = factorial(5)"];
+    JSValue *fiveFactorial = _hyphenationEngine[@"fiveFactorial"];
+    NSLog(@"5! = %@", fiveFactorial);
+    
+    
+    
+    
+    //This is my method.
+    [self hyphenateText:@"Leonardo Lee"];
+    
     
     
 }
@@ -79,7 +128,7 @@
     _syllableQueue.qualityOfService = NSQualityOfServiceUtility;
     _syllableQueue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
 }
--(void)loadScriptWithPath:(NSString *)path {
+-(NSString *)getScriptWithPath:(NSString *)path {
     NSError *error;
     NSData *file = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:&error];
     
@@ -87,8 +136,12 @@
         NSLog(@"Unlable to load file path: %@\nError Reading File: %@", path, error.localizedDescription);
     } else {
         NSString *js = [NSString stringWithUTF8String:[file bytes]];
-        [_hyphenationEngine evaluateScript: js];
+        return js;
     }
+    return NULL;
+}
+-(void)loadScript:(NSString *)script {
+    [_hyphenationEngine evaluateScript:script];
 }
 
 #pragma mark - Notification Center
@@ -126,15 +179,10 @@
     
     
     NSString *jsMethod = [NSString stringWithFormat:@"var output = h.hyphenateText(%@);", haiku];
-    [_hyphenationEngine evaluateScript:jsMethod];
+    JSValue *output = [_hyphenationEngine evaluateScript:jsMethod];
     
-    /*
-     TODO: 
-     I think the problem is garbage collection, the JIT is destroying values before it is grabbed.
-     Also the scripts might also be garbage collected before I am able to grab values from them.
-     */
-    
-    
+    NSLog(@"Text: %@", haiku);
+    NSLog(@"Hyphenated: %@", [output toString]);
 }
 
 -(NSUInteger)getSyllableCount {

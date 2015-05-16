@@ -13,7 +13,6 @@
 
 @interface SyllableController : NSObject
 
-@property (nonatomic, strong) JSVirtualMachine *vm;
 @property (nonatomic, strong) JSContext *hyphenationEngine;
 @property (nonatomic, strong) NSOperationQueue *syllableQueue;
 
