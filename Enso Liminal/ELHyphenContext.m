@@ -11,7 +11,7 @@
 
 @interface ELHyphenContext ()
 
-//@property (nonatomic, strong) SyllableController *
+@property (nonatomic, strong) SyllableController *syllableController;
 
 @end
 
@@ -21,11 +21,10 @@
 {
     self = [super init];
     if (self) {
-        //
+        self.uniqueIdentifier = [NSUUID UUID];
+        self.syllableController = [SyllableController sharedInstance];
     }
     return self;
 }
-
-
 
 @end

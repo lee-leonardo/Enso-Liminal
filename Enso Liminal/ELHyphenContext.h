@@ -11,4 +11,6 @@
 
 @interface ELHyphenContext : NSObject <JSExport>
 
+@property (nonatomic, strong) NSUUID *uniqueIdentifier;
+
 @end

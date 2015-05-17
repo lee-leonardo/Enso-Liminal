@@ -23,6 +23,7 @@
     self = [super init];
     if (self) {
         [self setupQueue];
+        [self setupJavascriptExceptionHandler];
         [self setupHyphenationDictionary];
     }
     return self;
@@ -40,6 +41,15 @@
 }
 
 #pragma mark - Setup
+-(void)setupJavascriptExceptionHandler {
+    void (^exceptionHandler)(JSContext*, JSValue*) = ^void(JSContext *context, JSValue *exception) {
+        NSLog(@"A javascript error occurred.");
+        NSLog(@"Javascript Error: %@", exception);
+    };
+    
+    self.hyphenationEngine.exceptionHandler = exceptionHandler;
+}
+
 //TODO: The files for the hyphenation dictory needs to be adjusted to look for the right filepaths.
 -(void)setupHyphenationDictionary {
     _vm = [[JSVirtualMachine alloc] init];
@@ -55,6 +65,7 @@
     NSString *englishScript = [self getScriptWithPath:englishLanguagePath];
     
     NSString *concatScript = [NSString stringWithFormat:@"%@" "%@", hypherScript, englishScript];
+    NSLog(@"%@", concatScript);
     [self loadScript:concatScript];
     
     
