@@ -11,6 +11,7 @@
 		3880D6281AE472AD008DA736 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6261AE472AD008DA736 /* Fabric.framework */; };
 		3880D62B1AE47330008DA736 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6291AE47330008DA736 /* TwitterKit.framework */; };
 		3880D62C1AE47330008DA736 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3880D62A1AE47330008DA736 /* TwitterKitResources.bundle */; };
+		388BEB9E1B080EC00055821E /* ELHyphenContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 388BEB9D1B080EC00055821E /* ELHyphenContext.m */; };
 		38A922451AD4F718002D1777 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A922441AD4F718002D1777 /* AppDelegate.swift */; };
 		38A922481AD4F718002D1777 /* Enso_Liminal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38A922461AD4F718002D1777 /* Enso_Liminal.xcdatamodeld */; };
 		38A9224A1AD4F718002D1777 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A922491AD4F718002D1777 /* ViewController.swift */; };
@@ -51,6 +52,8 @@
 		3880D6261AE472AD008DA736 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		3880D6291AE47330008DA736 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		3880D62A1AE47330008DA736 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		388BEB9C1B080EC00055821E /* ELHyphenContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELHyphenContext.h; sourceTree = "<group>"; };
+		388BEB9D1B080EC00055821E /* ELHyphenContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELHyphenContext.m; sourceTree = "<group>"; };
 		38A9223F1AD4F718002D1777 /* Enso Liminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Enso Liminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A922431AD4F718002D1777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38A922441AD4F718002D1777 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 				3817173F1AE21750000E4648 /* english.js */,
 			);
 			name = js;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		387CA1E01AD642AE00011BB6 /* ViewController */ = {
@@ -154,6 +158,7 @@
 				38F66A9B1AFF256F0094764C /* Constants.m */,
 				38A9226B1AD4FBDC002D1777 /* Enso Liminal-Bridging-Header.h */,
 				38A922441AD4F718002D1777 /* AppDelegate.swift */,
+				38A9226A1AD4FBA3002D1777 /* JS Virtual Machine */,
 				38A922681AD4FB60002D1777 /* Model */,
 				38A922671AD4FB59002D1777 /* Controller */,
 				38A922691AD4FB66002D1777 /* View */,
@@ -192,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				387CA1E01AD642AE00011BB6 /* ViewController */,
-				38A9226A1AD4FBA3002D1777 /* DataController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -214,13 +218,16 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		38A9226A1AD4FBA3002D1777 /* DataController */ = {
+		38A9226A1AD4FBA3002D1777 /* JS Virtual Machine */ = {
 			isa = PBXGroup;
 			children = (
+				3817173E1AE2173E000E4648 /* js */,
 				38A9226C1AD4FBDC002D1777 /* SyllableController.h */,
 				38A9226D1AD4FBDC002D1777 /* SyllableController.m */,
+				388BEB9C1B080EC00055821E /* ELHyphenContext.h */,
+				388BEB9D1B080EC00055821E /* ELHyphenContext.m */,
 			);
-			name = DataController;
+			name = "JS Virtual Machine";
 			sourceTree = "<group>";
 		};
 		38CFF2DC1ADB50D1005DBC3E /* Frameworks */ = {
@@ -234,7 +241,6 @@
 				3880D62A1AE47330008DA736 /* TwitterKitResources.bundle */,
 				3880D6251AE472AD008DA736 /* Crashlytics.framework */,
 				3880D6261AE472AD008DA736 /* Fabric.framework */,
-				3817173E1AE2173E000E4648 /* js */,
 				38A922711AD4FD36002D1777 /* JavaScriptCore.framework */,
 				38A9226F1AD4FC21002D1777 /* WebKit.framework */,
 				1948C5C39D09D5E1CB50F453 /* Pods_Enso_Liminal.framework */,
@@ -441,6 +447,7 @@
 				38EB18141AEC5FD5004FA394 /* ELWriteViewController.swift in Sources */,
 				38A922451AD4F718002D1777 /* AppDelegate.swift in Sources */,
 				38F66A9C1AFF256F0094764C /* Constants.m in Sources */,
+				388BEB9E1B080EC00055821E /* ELHyphenContext.m in Sources */,
 				38EB181E1AEC6336004FA394 /* HaikuTextView.m in Sources */,
 				38A922481AD4F718002D1777 /* Enso_Liminal.xcdatamodeld in Sources */,
 				38D384A31AE8BD8B00D5783B /* LoginViewController.swift in Sources */,

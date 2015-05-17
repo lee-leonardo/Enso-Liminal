@@ -55,10 +55,6 @@
     NSString *englishScript = [self getScriptWithPath:englishLanguagePath];
     
     NSString *concatScript = [NSString stringWithFormat:@"%@" "%@", hypherScript, englishScript];
-    
-    NSLog(@"%@", hypherScript);
-    NSLog(@"%@", englishScript);
-    NSLog(@"%@", concatScript);
     [self loadScript:concatScript];
     
     
@@ -70,6 +66,7 @@
     JSValue *hyphenate = _hyphenationEngine[@"Hyper.prototype.hyphenateText"];
     JSValue *english = _hyphenationEngine[@"english"];
     JSValue *h = _hyphenationEngine[@"h"];
+    NSLog(@"Context: %@", [_hyphenationEngine.globalObject toObject]);
     NSLog(@"Hyper: %@", hypher);
     NSLog(@"Trie: %@", trie);
     NSLog(@"Hyphenate: %@", hyphenate);
@@ -114,7 +111,12 @@
     NSLog(@"5! = %@", fiveFactorial);
     
     
-    
+    _hyphenationEngine[@"moduloFive"] = @"function (givenInt) { return givenInt % 5 };";
+    NSLog(@"%@", _hyphenationEngine[@"moduloFive"]);
+    JSValue *sixteenMod = [_hyphenationEngine evaluateScript:@"var mod5Effect =  moduloFive(16);"]; //This is incorrect
+    NSLog(@"16 mod 5 = %@", sixteenMod);
+    sixteenMod = _hyphenationEngine[@"mod5Effect"];
+    NSLog(@"16 mod 5 = %@", sixteenMod);
     
     //This is my method.
     [self hyphenateText:@"Leonardo Lee"];
