@@ -21,10 +21,42 @@
 {
     self = [super init];
     if (self) {
-        self.uniqueIdentifier = [NSUUID UUID];
+        self.uniqueIdentifier = [self createUniqueHash];
         self.syllableController = [SyllableController sharedInstance];
+        
+        //Call methods that will setup the
     }
     return self;
+}
+
+-(NSString *)createUniqueHash {
+    NSUUID *generatedId = [NSUUID UUID];
+    
+    NSArray *UUIDSegments = [generatedId.UUIDString componentsSeparatedByString:@"-"];
+    NSString *withDashesRemoved = [NSString stringWithFormat:@"%@%@%@%@%@",
+                                                           UUIDSegments[0],
+                                                           UUIDSegments[1],
+                                                           UUIDSegments[2],
+                                                           UUIDSegments[3],
+                                                           UUIDSegments[4]];
+    
+    return withDashesRemoved;
+}
+
+-(void)setupValueListener {
+    
+}
+
+-(JSValue *)captureReference {
+    
+    
+    return NULL;
+}
+
+-(NSUInteger)updateSyllableCount {
+    
+    
+    return 0;
 }
 
 @end
