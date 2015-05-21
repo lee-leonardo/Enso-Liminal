@@ -64,9 +64,8 @@
     NSString *hypherScript = [self getScriptWithPath:hypherPath];
     NSString *englishScript = [self getScriptWithPath:englishLanguagePath];
     
-    NSString *concatScript = [NSString stringWithFormat:@"%@" "%@", hypherScript, englishScript];
-    NSLog(@"%@", concatScript);
-    [self loadScript:concatScript];
+    [self loadScript:hypherScript];
+    [self loadScript:englishScript];
     
     
     //This demonstrates that even though my script is valid input, there's something wrong in the translation of it into code that the engine can use....
@@ -132,9 +131,30 @@
     //This is my method.
     [self hyphenateText:@"Leonardo Lee"];
     
-    
+    [self experimentWithObjectsAndPrototypes];
     
 }
+
+-(void)experimentWithObjectsAndPrototypes {
+    [_hyphenationEngine evaluateScript:@"var awesome = {};"];
+    
+    //Interestingly enough, you cannot add things to the object prototype?
+    [_hyphenationEngine evaluateScript:@"var awesome.prototype.Awesome = function () { return 10; };"];
+    JSValue * attempt = _hyphenationEngine[@"awesome.Awesome()"];
+    NSLog(@"Attempt to grab an object prototype added method: %@", attempt); //Doesn't exist.
+    attempt = _hyphenationEngine[@"awesome.prototype.Awesome()"];
+    NSLog(@"Attempt to grab an object prototype added method: %@", attempt); //Doesn't exist.
+    attempt = _hyphenationEngine[@"awesome"][@"prototype"][@"Awesome"];
+    NSLog(@"Attempt to grab an object prototype added method: %@", attempt); //Doesn't exist.
+    
+    
+    // Trying to add a method, and it worked fine!
+    [_hyphenationEngine evaluateScript:@"function canYouAddMethods() { return 10; };"];
+
+    NSLog(@"Context: %@", [_hyphenationEngine.globalObject toObject]);
+
+}
+
 -(void)setupQueue {
     _syllableQueue = [[NSOperationQueue alloc] init];
     _syllableQueue.name = @"hyphenator";
