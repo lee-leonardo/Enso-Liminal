@@ -74,7 +74,9 @@
      subscribeNext:^(NSString *updatedString) {
         NSLog(@"Received String: %@", updatedString);
         NSLog(@"Received String Length: %li", (long)updatedString.length);
-         self.syllableCount = [_syllableController getSyllableCount];
+         
+         // TODO: Replacement for get syllable count
+//         self.syllableCount = [_syllableController getSyllableCount];
     }];
 }
 

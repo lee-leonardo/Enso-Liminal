@@ -22,8 +22,6 @@
 		38A9226E1AD4FBDC002D1777 /* SyllableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A9226D1AD4FBDC002D1777 /* SyllableController.m */; };
 		38A922721AD4FD36002D1777 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A922711AD4FD36002D1777 /* JavaScriptCore.framework */; };
 		38D384A31AE8BD8B00D5783B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D384A21AE8BD8B00D5783B /* LoginViewController.swift */; };
-		38D8E12F1AE7742800D8BBEC /* noNodehyper.js in Resources */ = {isa = PBXBuildFile; fileRef = 38D8E12A1AE770EF00D8BBEC /* noNodehyper.js */; };
-		38D8E1301AE7742800D8BBEC /* english.js in Resources */ = {isa = PBXBuildFile; fileRef = 3817173F1AE21750000E4648 /* english.js */; };
 		38EB180A1AEC5B7B004FA394 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EB18071AEC5B7B004FA394 /* FBSDKCoreKit.framework */; };
 		38EB180B1AEC5B7B004FA394 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EB18081AEC5B7B004FA394 /* FBSDKLoginKit.framework */; };
 		38EB180C1AEC5B7B004FA394 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EB18091AEC5B7B004FA394 /* FBSDKShareKit.framework */; };
@@ -47,7 +45,6 @@
 /* Begin PBXFileReference section */
 		0276E0A644B01BE6FB427A3B /* Pods-Enso Liminal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enso Liminal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Enso Liminal/Pods-Enso Liminal.debug.xcconfig"; sourceTree = "<group>"; };
 		1948C5C39D09D5E1CB50F453 /* Pods_Enso_Liminal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Enso_Liminal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3817173F1AE21750000E4648 /* english.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = english.js; path = "Enso Liminal/js/english.js"; sourceTree = "<group>"; };
 		3880D6251AE472AD008DA736 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3880D6261AE472AD008DA736 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		3880D6291AE47330008DA736 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -71,7 +68,6 @@
 		38A9226F1AD4FC21002D1777 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		38A922711AD4FD36002D1777 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		38D384A21AE8BD8B00D5783B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		38D8E12A1AE770EF00D8BBEC /* noNodehyper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = noNodehyper.js; path = "Enso Liminal/js/noNodehyper.js"; sourceTree = "<group>"; };
 		38EB18071AEC5B7B004FA394 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		38EB18081AEC5B7B004FA394 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		38EB18091AEC5B7B004FA394 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -111,16 +107,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3817173E1AE2173E000E4648 /* js */ = {
-			isa = PBXGroup;
-			children = (
-				38D8E12A1AE770EF00D8BBEC /* noNodehyper.js */,
-				3817173F1AE21750000E4648 /* english.js */,
-			);
-			name = js;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		387CA1E01AD642AE00011BB6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,7 +207,6 @@
 		38A9226A1AD4FBA3002D1777 /* JS Virtual Machine */ = {
 			isa = PBXGroup;
 			children = (
-				3817173E1AE2173E000E4648 /* js */,
 				38A9226C1AD4FBDC002D1777 /* SyllableController.h */,
 				38A9226D1AD4FBDC002D1777 /* SyllableController.m */,
 				388BEB9C1B080EC00055821E /* ELHyphenContext.h */,
@@ -359,8 +344,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38D8E12F1AE7742800D8BBEC /* noNodehyper.js in Resources */,
-				38D8E1301AE7742800D8BBEC /* english.js in Resources */,
 				38A9224D1AD4F718002D1777 /* Main.storyboard in Resources */,
 				38A922521AD4F718002D1777 /* LaunchScreen.xib in Resources */,
 				38A9224F1AD4F718002D1777 /* Images.xcassets in Resources */,
