@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Constants.h"
+#include "hnjalloc.h"
+#include "hyphen.h"
 
 @interface SyllableController : NSObject
 

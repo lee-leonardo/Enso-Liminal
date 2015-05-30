@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#define MAXCHARLEN 140
 
 
 extern NSString *EL_Haiku_Post;

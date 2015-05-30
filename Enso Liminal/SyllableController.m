@@ -10,6 +10,10 @@
 
 @interface SyllableController ()
 
+@property (nonatomic) HyphenDict dict;
+@property (nonatomic) HyphenState state;
+@property (nonatomic) HyphenTrans trans;
+
 @end
 
 @implementation SyllableController
@@ -20,6 +24,8 @@
     self = [super init];
     if (self) {
         [self setupQueue];
+        
+        [self learnHyphenC];
     }
     return self;
 }
@@ -41,6 +47,28 @@
     _syllableQueue.name = @"hyphenator";
     _syllableQueue.qualityOfService = NSQualityOfServiceUtility;
     _syllableQueue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
+}
+
+-(void)setupHyphen {
+    //Setup Trans
+    
+    //Setup State
+    _state.trans = &_trans;
+    
+    //Setup Dictionary
+    _dict.states = &_state;
+    
+}
+
+-(void)learnHyphenC {
+    char ** rep = NULL;
+    int * pos = NULL;
+    int * cut = NULL;
+    char hyphens[MAXCHARLEN];
+    
+    int product = hnj_hyphen_hyphenate2(&_dict, "example", 7, hyphens, NULL, &rep, &pos, &cut);
+    NSLog(@"%i", product);
+
 }
 
 #pragma mark - Notification Center
