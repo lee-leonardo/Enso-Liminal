@@ -10,6 +10,7 @@
 
 @interface SyllableController ()
 
+@property (nonatomic, strong) NSCharacterSet *wordSeparators;
 @property (nonatomic) HyphenDict dict;
 @property (nonatomic) HyphenState state;
 @property (nonatomic) HyphenTrans trans;
@@ -24,8 +25,10 @@
     self = [super init];
     if (self) {
         [self setupQueue];
+        [self setupWordSeparators];
+        [self setupHyphenC];
         
-        [self learnHyphenC];
+//        [self learnHyphenC];
     }
     return self;
 }
@@ -48,18 +51,27 @@
     _syllableQueue.qualityOfService = NSQualityOfServiceUtility;
     _syllableQueue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
 }
-
--(void)setupHyphen {
+-(void)setupWordSeparators {
+    NSCharacterSet *whiteSpace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSMutableCharacterSet *punctuationAndWhitespace = [NSMutableCharacterSet punctuationCharacterSet];
+    [punctuationAndWhitespace formUnionWithCharacterSet: whiteSpace];
+    _wordSeparators = punctuationAndWhitespace;
+}
+-(void)setupHyphenC {
     //Setup Trans
+    
     
     //Setup State
     _state.trans = &_trans;
     
     //Setup Dictionary
+    _dict.lhmin = 1;
+    _dict.rhmin = 2;
     _dict.states = &_state;
     
 }
 
+#pragma mark LearningHyphenC
 -(void)learnHyphenC {
     char ** rep = NULL;
     int * pos = NULL;
@@ -79,6 +91,8 @@
         NSString *haikuPosted = latestPost[@"haiku"];
         
         // TODO: C Library to hyphenate text.
+        [self handleHyphenation:haikuPosted];
+        
     }];
     
 }
@@ -96,6 +110,24 @@
         // TODO: C Library to hyphenate text
         
     }];
+}
+#pragma mark Hyphenation
+-(void)handleHyphenation:(NSString *)withString {
+    int sum = 0;
+    
+    char **rep;
+    int *pos = NULL;
+    int *cut = NULL;
+    char hyphens[MAXCHARLEN];
+    
+    NSArray *words = [withString componentsSeparatedByCharactersInSet:_wordSeparators];
+    
+    for (NSString *word in words) {
+        NSLog(@"word: %@", word);
+        int product = 0;
+//        int product = hnj_hyphen_hyphenate2(&_dict, word, word.length, hyphens, <#char *hyphenated_word#>, <#char ***rep#>, <#int **pos#>, <#int **cut#>)
+        sum += product;
+    }
 }
 
 

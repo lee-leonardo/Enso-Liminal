@@ -45,6 +45,9 @@
 }
 
 -(void)checkingExpressionSetup {
+    //TODO: Think instead of regexp checking against character sets. Although this is badass!
+    
+    
     NSString *disallowedCharacters = @"[~`@#$%^&*()-_=+{}\\;:\"<>]";
     NSError *error = NULL;
     NSRegularExpression *toCheckAgainst = [NSRegularExpression regularExpressionWithPattern:disallowedCharacters options:NSRegularExpressionCaseInsensitive error:&error];
