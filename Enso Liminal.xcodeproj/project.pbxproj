@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		384169331B1AB92500AB8D25 /* hnjalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3841692F1B1AB92500AB8D25 /* hnjalloc.c */; };
 		384169341B1AB92500AB8D25 /* hyphen.c in Sources */ = {isa = PBXBuildFile; fileRef = 384169311B1AB92500AB8D25 /* hyphen.c */; };
+		384169371B1AD83700AB8D25 /* NSString+Hyphenate.m in Sources */ = {isa = PBXBuildFile; fileRef = 384169361B1AD83700AB8D25 /* NSString+Hyphenate.m */; };
 		3880D6271AE472AD008DA736 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6251AE472AD008DA736 /* Crashlytics.framework */; };
 		3880D6281AE472AD008DA736 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6261AE472AD008DA736 /* Fabric.framework */; };
 		3880D62B1AE47330008DA736 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880D6291AE47330008DA736 /* TwitterKit.framework */; };
@@ -50,6 +51,8 @@
 		384169301B1AB92500AB8D25 /* hnjalloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hnjalloc.h; path = "../../../../Documents/hyphen-2.8.8/hnjalloc.h"; sourceTree = "<group>"; };
 		384169311B1AB92500AB8D25 /* hyphen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hyphen.c; path = "../../../../Documents/hyphen-2.8.8/hyphen.c"; sourceTree = "<group>"; };
 		384169321B1AB92500AB8D25 /* hyphen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hyphen.h; path = "../../../../Documents/hyphen-2.8.8/hyphen.h"; sourceTree = "<group>"; };
+		384169351B1AD83700AB8D25 /* NSString+Hyphenate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hyphenate.h"; sourceTree = "<group>"; };
+		384169361B1AD83700AB8D25 /* NSString+Hyphenate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hyphenate.m"; sourceTree = "<group>"; };
 		3880D6251AE472AD008DA736 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3880D6261AE472AD008DA736 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		3880D6291AE47330008DA736 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 			children = (
 				38A9226C1AD4FBDC002D1777 /* SyllableController.h */,
 				38A9226D1AD4FBDC002D1777 /* SyllableController.m */,
+				384169351B1AD83700AB8D25 /* NSString+Hyphenate.h */,
+				384169361B1AD83700AB8D25 /* NSString+Hyphenate.m */,
 			);
 			name = DataController;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				38EB181E1AEC6336004FA394 /* HaikuTextView.m in Sources */,
 				38A922481AD4F718002D1777 /* Enso_Liminal.xcdatamodeld in Sources */,
 				38D384A31AE8BD8B00D5783B /* LoginViewController.swift in Sources */,
+				384169371B1AD83700AB8D25 /* NSString+Hyphenate.m in Sources */,
 				38A9226E1AD4FBDC002D1777 /* SyllableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -108,29 +108,5 @@
         
     }];
 }
-#pragma mark Hyphenation
--(void)handleHyphenation:(NSString *)withString {
-    int sum = 0;
-    
-    char **rep;
-    int *pos = NULL;
-    int *cut = NULL;
-    char hyphens[MAXCHARLEN];
-    
-    NSArray *words = [withString componentsSeparatedByCharactersInSet:_wordSeparators];
-    
-    for (NSString *word in words) {
-        NSLog(@"word: %@", word);
-        int product = 0;
-//        int product = hnj_hyphen_hyphenate2(&_dict, word, word.length, hyphens, <#char *hyphenated_word#>, <#char ***rep#>, <#int **pos#>, <#int **cut#>)
-        sum += product;
-    }
-    
-    free(rep);
-    free(pos);
-    free(cut);
-    free(hyphens);
-}
-
 
 @end
